@@ -1,9 +1,11 @@
 import React from 'react';
-
-export default function Card(){
+import './Card.css';
+export default function Card() {
   return (
     <>
-    card
+      <div className='card'>
+        card
+      </div>
     </>
   );
 }
