@@ -1,0 +1,70 @@
+.container-geral {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  
+  width: 100%;
+  height: 89.5vh;
+}
+/* --------------- */
+.container-texto h2{
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+/* -------------- */
+.container-panel {
+  color: white;
+  border: thin solid black;
+  border-radius: 7px;
+  background-color: black;
+  width: 350px;
+  text-align: center;
+  padding: 20px;
+}
+.container-panel .panel-row{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.container-panel h1 {
+  font-size: 26px;
+  font-weight: 500;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+input { 
+  border: solid grey thin;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+/* ------------- */
+.container-button {
+  /* border: thin solid black; */
+  display: flex;
+  flex-flow: row;
+  margin: 10px;
+  justify-content: space-between;
+}
+.container-button button {
+  color: white;
+  background-color: rgb(145, 31, 168);
+  border-radius: 7.5px;
+  padding: 0.75rem;
+} 
+.container-button button:hover {
+  background-color: rgb(145, 31, 168, 0.5);
+  transition: 0.5s;
+}
+/*  */
+.panel-form {
+  color: black;
+  padding: 1rem;
+  border: solid grey thin; 
+  border-radius: 7px;
+  background-color: white;
+}
+em {
+  color: rgb(145, 31, 168);
+  font-weight: 600;
+}
