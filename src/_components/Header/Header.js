@@ -64,7 +64,7 @@ export default function Header() {
                     navigate('/register')
                   }}
                 >
-                  Cadastr-se
+                  Cadastre-se
                 </button>
               </div>
             </div>

@@ -99,13 +99,14 @@ nav span {
   padding: 10px 20px;
   width: 280px;
   border: 1px solid #eee;
-  
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .dropdown-user.active{
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  transition: 500ms
+  transition: 500ms;
 }
 .dropdown-user.inactive{
   opacity: 0;
@@ -144,6 +145,18 @@ nav span {
   padding: 5px;
   font-size: 14px;
   font-family: var(--title-fonts);
+  transition: 500ms
+}
+.dropdown-user button:nth-child(2):hover{
+  background: var(--color-secondary);
+}
+.dropdown-user button:nth-child(3){
+  background: #fff;
+  border: 1px solid var(--color-primary);
+  color: var(--text-color)
+}
+.dropdown-user button:nth-child(3):hover{
+  color: var(--color-secondary);
 }
 
 .cart {
