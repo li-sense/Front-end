@@ -1,15 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import Logocentral from "../../_assets/img/logoredonda.png";
 import { FaLock } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineMail } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 
 // import Logobackground from "../../_assets/img/tela6.png";
 // import Logofinal from "../../_assets/img/logoc.png";
 
 export default function Login() {
-  // const navigate = useNavigate();
+   const navigate = useNavigate();
   return (
 
     <div className="container-geral">
@@ -48,10 +50,10 @@ export default function Login() {
               </div>
             </div>
             <p className="esq">Esqueceu a senha?</p>
-            <button type="submit" className="btn"> Entrar</button>
+            <button onClick={() => {navigate('/')}} type="submit" className="btn"> Entrar</button>
           </form>
           <p className="cadastrar">
-            <a>Criar uma conta</a>
+            <a onClick={() => {navigate('/register')}}>Criar uma conta</a>
           </p>
           <p className="entarg">
             <a>Ou</a>
