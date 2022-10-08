@@ -50,6 +50,7 @@ export default function Login() {
               </div>
             </div>
             <p className="esq">Esqueceu a senha?</p>
+            <button type="submit" className="btn"> Entrar</button>
           </form>
           <p className="cadastrar">
             <a onClick={() => {navigate('/register')}}>Criar uma conta</a>
