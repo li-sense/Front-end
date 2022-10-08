@@ -17,7 +17,8 @@ export default function Login() {
         <div className="textoLogin">
           <img className="img1" src={Logocentral} />
           <h2>Seja Bem-vindo!</h2>
-          <span>"Oportunidades não surgem. É você que as cria" LI-SENSE onde você é importante."</span>
+          <span>"Oportunidades não surgem. É você que as cria." </span>
+          <span>LI-SENSE onde você é importante.</span>
         </div>
       </div>
       <div className="telalogin">

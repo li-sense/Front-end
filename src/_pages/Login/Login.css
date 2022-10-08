@@ -1,7 +1,7 @@
 
   .container-geral{
      background-image: url("../../_assets/img/tela6.png"); 
-     background-color: #7205A6; 
+     background-color: var(--color-primary); 
     background-size: 100% 100% ;
     background-repeat: no-repeat;
     width: 100%;
@@ -23,7 +23,7 @@
   .containerLogin h1{
     font-size: 25px;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--title-fonts);
   }
   
   .img1{
@@ -50,7 +50,7 @@
   .textoLogin{
     margin-top: -100px;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--body-fonts);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -59,6 +59,11 @@
   }
   .textoLogin h2 {
     margin-bottom: 8px;
+    margin-top: -15px;
+    font-family: var(--body-fonts);
+    font-size: var(--title-font-size);
+    font-weight: 600;
+
   }
   
   .logoImgFooter img{
@@ -119,7 +124,8 @@
   .span-input {
     display: flex;
     justify-content: start;
-
+    font-family: var(--body-fonts);
+    font-size: 14px;
     margin-left: 10px;
     margin-bottom: 1px;
   }
@@ -134,50 +140,31 @@
   }
   
   .btn{
-   font-family: 'Roboto', sans-serif;
-   font-weight: bold;
+   font-family: var(--title-fonts);
    box-shadow: 5%;
-   background-color:#7205A6;
+   background-color: var(--color-primary);
    width: 200px;
    height: 35px;
    border-radius: 5px;
    border-color: transparent;
    color: aliceblue;
    cursor: pointer;
-   font-weight: bold;
+   font-weight: 500;
    margin-top: 15px;
   
   }
   
  .entarg{
 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--body-fonts);
     margin-top: -2px;
     margin-bottom: 4px;
     color: #C3C6CF;
+    font-size: 14px;
     
 
   }  
-  .content-btn1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 220px;
-    box-shadow: -1px 1px 16px 0px rgba(0,0,0,0.07);
-    border-radius: 5px;
-    padding: 10px;
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    /* height: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(221, 213, 221);
-    border-radius: 5px;
-    border-color: transparent;
-    cursor: pointer;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, sans-serif; */
-  }
+  
   
   
   p{
@@ -188,16 +175,27 @@
   .esq{
     padding: 19px;
     padding-left: 150px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--body-fonts);
+    font-size: 12px;
     cursor: pointer;
     
   }
   .cadastrar{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--body-fonts);
     color: black;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 10px;
+  }
+  .content-btn1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 220px;
+    box-shadow: -1px 1px 16px 0px rgba(0,0,0,0.07);
+    border-radius: 5px;
+    padding: 10px;
+    
   }
   
   
