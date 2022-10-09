@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --color-primary: #62378c;
+  --color-secondary: #111827;
+  --color-tertiary: #cd9042;
+  --color-background: #;
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-hover: rgba(255, 255, 255, 0.739);
+
+  /* fonts*/
+  --title-font-size: 1.6rem;
+  --subtitle-font-size: 1rem;
+
+  --title-fonts: "Roboto", sans-serif;
+  --body-fonts: "Poppins", sans-serif;
+}

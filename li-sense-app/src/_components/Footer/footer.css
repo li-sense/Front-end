@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  background-color: var(--color-primary);
+}
+.footer p {
+  font-family: var(--body-fonts);
+  color: var(--text-color-hover);
+}
+.footer-logo a img {
+  width: 130px;
+}
+
+.footer-social {
+  display: flex;
+  font-size: 30px;
+  color: var(--text-color-hover);
+  gap: 10px;
+}
+.footer-social a:hover {
+  color: azure;
+  cursor: pointer;
+}

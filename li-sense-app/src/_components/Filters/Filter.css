@@ -1,0 +1,18 @@
+.filter {
+  font-family: var(--title-fonts);
+  box-shadow: 5%;
+  background-color: var(--color-primary);
+  height: 48px;
+  width: 150px;
+  color: #ffff;
+  padding: 3px;
+  transition: all 0.3s ease-out;
+  border-color: transparent;
+}
+
+.filter:hover {
+  background: #ffff;
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}

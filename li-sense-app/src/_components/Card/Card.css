@@ -1,0 +1,100 @@
+.card {
+  border: #ddbf54;
+  background: var(--myHGray);
+  outline: 0.01rem solid var(--mySubPurple);
+  padding: 10px;
+  outline-offset: -6px;
+  outline-width: 1px;
+  width: 327px;
+  height: 386px;
+  transition: all 1s;
+}
+
+:root {
+  --myBlack: #01161e;
+  --myWhite: #f5efef;
+  --myPurple: #802eb0;
+  --myHGray: #4e546a;
+  --myLGray: #d9d9d9;
+  --myBlue: #5871f4;
+  --myRed: #ee7272;
+  --myYellow: #ddbf54;
+  --myGreen: #70df89;
+  --mySubPurple: #8058f4;
+}
+
+.view {
+  margin: 2px, auto;
+  width: 312px;
+  height: 225px;
+}
+
+.title {
+  color: #d9d9d9;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+}
+
+.price {
+  color: #d9d9d9;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.desc {
+  color: #d9d9d9;
+  font-weight: bold;
+  font-family: candara;
+  padding: 10;
+  text-align: center;
+  font-size: 12px;
+  width: 85%;
+  padding-top: 0%;
+  word-wrap: break-word;
+  margin: 0 auto;
+}
+
+.vsicon {
+  color: #ffff;
+  background-color: var(--mySubPurple);
+  border-radius: 90px;
+  width: 30px;
+  height: 30px;
+}
+
+.img {
+  max-width: 240px;
+  width: 240px;
+  max-height: 240px;
+}
+
+.arrows {
+  float: right;
+  top: 100px;
+  transition: all 0.2s ease-in;
+}
+
+.arrow {
+  display: inline-block;
+  top: 40px;
+  height: 8px;
+  width: 60px;
+}
+
+.arrows:hover {
+  transition: all 0.2s ease-in;
+  transform: translateY(2px);
+}
+
+.card:hover {
+  transition: all 0.4s ease-in;
+  transform: scale(1.02);
+}
+
+.vsicon:hover {
+  transition: all 0.4s ease-in;
+  transform: scale(1.1);
+}
