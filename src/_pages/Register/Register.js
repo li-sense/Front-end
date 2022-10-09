@@ -8,8 +8,9 @@ import {BiLockAlt} from 'react-icons/bi' ;
 export default function Register() {
   const navigate = useNavigate();
   return (
-    <div className='container-geral'>
+    <div className='container-all'>
       <div className='container-texto'>
+      <img className='img2' src= {Logocentral}></img>
       <h1>Cadastro</h1>
         <span>"Facilite seus processos." <em>LI-SENSE</em>, onde você é importante.</span>
       </div>
@@ -37,60 +38,60 @@ export default function Register() {
               name='tel-input' id='tel-input'/>
           </div> */}
             <div className="mb-3">
-              <span className='span-input'>Nome Completo</span>
+              <span className='span-input1'>Nome completo</span>
               <div className='container-input'>
                 <input
                   type="email"
                   className="form-control"
-                  placeholder="Nome Completo"
+                  placeholder="nome completo"
                 />
-              <AiOutlineUserAdd size={24} className='icon' />
+              <AiOutlineUserAdd size={24} className='icon-register' />
               </div>
             </div>
             <div className="mb-3">
-              <span className='span-input'>E-mail</span>
+              <span className='span-input1'>Email</span>
               <div className='container-input'>
                 <input
                   type="email"
                   className="form-control"
                   placeholder="mail@mail.com"
                 />
-            <FiMail size={24} className='icon' />
+            <FiMail size={24} className='icon-register' />
               </div>
             </div>
             <div className="mb-3">
-              <span className='span-input'>Senha</span>
+              <span className='span-input1'>Senha</span>
               <div className='container-input'>
                 <input
                   type="email"
                   className="form-control"
-                  placeholder="Senha"
+                  placeholder="senha"
                 />
-          <BiLockAlt size={24} className='icon' />
+          <BiLockAlt size={24} className='icon-register' />
               </div>
             </div>
             <div className="mb-3">
-              <span className='span-input'>Repetir Senha</span>
+              <span className='span-input1'>Repetir senha</span>
               <div className='container-input'>
                 <input
                   type="email"
                   className="form-control"
-                  placeholder="Repetir senha"
+                  placeholder="repetir senha"
                 />
-          <BiLockAlt size={24} className='icon' />
+          <BiLockAlt size={24} className='icon-register' />
               </div>
             </div>
         </div>
       
         <div className='container-button'>
-          <button type='submit'className='btn' onClick={() => {navigate('/')}}>Cadastar</button>
+          <button type='submit'className='btn-cad' onClick={() => {navigate('/')}}>Cadastar</button>
           
           {/* 
             o botão de reiniciar por enquanto não tem funcionalidade porque 
             será mais facil implementa-lo quando estivermos usando hooks e states  
           */}
         </div>
-        <img className='img1' src= {Logocentral}></img>
+        
       </div>
     </div>
   );

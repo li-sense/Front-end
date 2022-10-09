@@ -8,6 +8,7 @@ export default function Card(props) {
   const { data } = props;
   return (
     <>
+   
       <div className='flex flex-col card overflow-hidden m-4'>
         <div className='w-full flex justify-end items-center'>
           <div className='vsicon flex items-center justify-center'>
@@ -24,13 +25,14 @@ export default function Card(props) {
                 {data.description}
               </p>
             </div>
-            <div class="arrows h-full w-[20%] -mt-8 -ml-8">
+            {/* <div class="arrows h-full w-[20%] -mt-8 -ml-8">
               <img src={Arrow} className="arrow"></img>
               <img src={Arrow} className="arrow"></img>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
+     
     </>
   );
 }

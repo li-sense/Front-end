@@ -27,7 +27,7 @@ export default function Login() {
         <div className="containerLogin">
           <h1>Login</h1>
           <form>
-            <div className="mb-3">
+            <div className="mb-login">
               <span className='span-input'>E-mail</span>
               <div className='container-input'>
                 <input
@@ -38,7 +38,7 @@ export default function Login() {
                 <HiOutlineMail size={24} className='icon' />
               </div>
             </div>
-            <div className="mb-3">
+            <div className="mb-login">
               <span className='span-input'>Password</span>
               <div className='container-input'>
                 <input
