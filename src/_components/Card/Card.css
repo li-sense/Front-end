@@ -1,3 +1,138 @@
+
+:root {
+    --myBlack: #01161E;
+    --myWhite: #f5efef;
+    --myPurple: #802EB0;
+    --myHGray: #4E546A;
+    --myLGray: #D9D9D9;
+
+    --myBlue: #5871F4;
+    --myRed: #EE7272;
+    --myYellow: #DDBF54;
+    --myGreen: #70DF89;
+    --mySubPurple: #8058F4;
+
+}
+
+#content {
+    width: 66vw;
+    height: 290vh;
+    margin: 50px auto;
+    background: var(--myGray);
+    z-index: 0;
+    position: relative;
+    border: #DDBF54;
+}
+
+.view {
+    float: right;
+    margin: 2px, auto;
+    width: 312px;
+    height: 225px;
+}
+
+.title {
+    color: #D9D9D9;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 28px;
+    top: 0px;
+  
+}
+
+.price {
+    color: #D9D9D9;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    
+}
+
+.desc {
+    color:#D9D9D9;
+    font-weight: bold;
+    font-family: candara;
+    padding: 10;
+    text-align: center;
+    font-size: 12px;
+    width: 85%;
+    padding-top: 0%;
+    word-wrap: break-word;
+    margin: 0 auto;
+
+}
+#icon {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    background-color: var(--mySubPurple);
+    border-radius: 90px;
+    width: 15px;
+    height: 15px;
+}
+
+.wrapper {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
 .card {
-  background: red;
+    background: var(--myHGray);
+    outline: 0.01rem solid var(--mySubPurple);
+    padding: 10px;
+    overflow: hidden;
+    margin: 0px auto;
+    z-index: 2;
+    outline-offset: -6px;
+    outline-width: 1px;
+    position: absolute;
+    width: 327px;
+    height: 386px;
+    transition: all 1s;
+}
+
+.arrows {
+    float: right;
+    top: 100px;
+}
+
+#upperArrow {
+    display:inline-block;
+    top: 40px;
+    height: 8px;
+    width: 60px; 
+}
+
+#lowerArrow {
+    height: 8px;
+    width: 60px; 
+    position:absolute;
+    bottom: 14px;
+}
+
+#one:hover {
+    transform: scale(1.02, 1.02);
+
+}
+
+#one:hover #upperArrow {
+    animation-name: bumpdiv;
+    animation-duration: 0.75s;
+}
+
+#one:hover #lowerArrow {
+    animation-name: bumpdiv;
+    transition-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes bumpdiv {
+    0%{
+        transform: translateY(2px);
+    }
+    50%{
+        transform: translateY(-2px)
+    }
 }
