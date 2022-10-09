@@ -1,0 +1,263 @@
+
+  .container-geral{
+     background-image: url("../../_assets/img/tela6.png"); 
+     background-color: var(--color-primary); 
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 89.5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .containerLogin{
+    background: white;
+    width: 350px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:0 4px 8px 0;
+    margin-top: 45px;
+  }
+  
+  .containerLogin h1{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--title-fonts);
+  }
+  
+  .img1{
+  width: 180px;
+  margin-top: -40px;
+  margin-bottom: 50px;
+    
+  }
+  
+  .textoLogin .img1{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    opacity: 90%;
+    box-shadow: 0px 3px 3px ;
+    
+  } 
+  .containerTexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .textoLogin{
+    margin-top: -100px;
+    color: white;
+    font-family: var(--body-fonts);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .textoLogin h2 {
+    margin-bottom: 8px;
+    margin-top: -15px;
+    font-family: var(--body-fonts);
+    font-size: var(--title-font-size);
+    font-weight: 600;
+
+  }
+  
+  .logoImgFooter img{
+    width: 200px;}
+  
+  .telalogin{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  /* .imgemfinal{
+    background-image: url("../../_assets/img/logoc.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+  } */
+  .container-img-logo{
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+  }
+  
+  
+  .telalogin .campos{
+  
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form{
+    padding-top: 40%;
+    border-radius: 7%;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .mb-3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .container-input {
+    position: relative;
+  }
+
+  .icon {
+    position: absolute;
+    top:50%;
+    left:260px;
+    transform: translateY(-50%);
+    color: #C3C6CF;
+  }
+
+  .span-input {
+    display: flex;
+    justify-content: start;
+    font-family: var(--body-fonts);
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 1px;
+  }
+  
+  .mb-3 .form-control{
+   height: 40px;
+   width: 290px;
+   border-radius: 3px; 
+   border-color: transparent;
+   background-color: #ECEAF0;
+   padding: 10px;
+  }
+  
+  .btn{
+   font-family: var(--title-fonts);
+   box-shadow: 5%;
+   background-color: var(--color-primary);
+   width: 200px;
+   height: 35px;
+   border-radius: 5px;
+   border-color: transparent;
+   color: aliceblue;
+   cursor: pointer;
+   font-weight: 500;
+   margin-top: 15px;
+  
+  }
+  
+ .entarg{
+
+    font-family: var(--body-fonts);
+    margin-top: -2px;
+    margin-bottom: 4px;
+    color: #C3C6CF;
+    font-size: 14px;
+    
+
+  }  
+  
+  
+  
+  p{
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .esq{
+    padding: 19px;
+    padding-left: 150px;
+    font-family: var(--body-fonts);
+    font-size: 12px;
+    cursor: pointer;
+    
+  }
+  .cadastrar{
+    font-family: var(--body-fonts);
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .content-btn1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 220px;
+    box-shadow: -1px 1px 16px 0px rgba(0,0,0,0.07);
+    border-radius: 5px;
+    padding: 10px;
+    
+  }
+  
+  
+  @media screen and (max-width: 400px) {
+    .containerLogin{
+     
+      width: 100%;
+      margin: auto 20px
+      
+    }
+  }
+  
+    @media screen and (max-width: 768px) {
+      .containerTexto, .imgemfinal{
+        display: none;
+      }
+  
+      .textoLogin .img1{
+        width: 500px;
+      }
+  
+      .container-geral{
+        
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media screen and (max-width: 783px) {
+     
+      .containerTexto span{
+        margin-left: 20px;
+        text-align: center;
+      }
+      
+     
+    }
+   
+  @media screen and (max-width: 1024px){
+    
+    .textoLogin span{
+      margin-left: 20px;
+      text-align: center;
+    }
+    
+    }
+  
+    @media screen and (max-width: 1280px){
+    
+      .containerTexto{
+        margin-left: 50px;
+        text-align: center;
+      }
+      
+      }
+    
+  @media screen and (max-width: 1400px){
+    
+    .containerTexto{
+      margin-left: 50px;
+    }
+    
+    }
+  
+
