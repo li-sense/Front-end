@@ -1,13 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import LisenseContext from "../../_context/LisenseContext";
 import "./Card.css";
 import Arrow from "./img/arrow.png";
 import { VscFile } from "react-icons/vsc";
 
 export default function Card(props) {
   const { data } = props;
+  const { setCurrentProduct } = React.useContext(LisenseContext);
+  const navigate = useNavigate();
+  const setProduct = (product) => {
+   setCurrentProduct(product);
+   navigate(`/product/${product.name}`)
+  }
   return (
     <>
-      <div className="flex flex-col card overflow-hidden m-4">
+      <div className="flex flex-col card overflow-hidden m-4" onClick={() => {setProduct(data)}}>
         <div className="w-full flex justify-end items-center">
           <div className="vsicon flex items-center justify-center">
             <VscFile size={20} />
