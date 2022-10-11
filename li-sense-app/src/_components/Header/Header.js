@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./header.css";
 import Logo from "../../_assets/img/logo.png";
+import DropDownUser from "../DropDownUser/DropDownUser";
 
 import { FaUser, FaCartPlus, FaSearch } from "react-icons/fa";
 
 export default function Header() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [isUserLogin, setIsUserLogin] = useState(false);
   return (
     <>
       <header>
@@ -43,32 +45,49 @@ export default function Header() {
                 <i>
                   <FaUser />
                 </i>
-                <span>
-                  Olá, faça seu login <br />
-                  ou cadastre-se
-                </span>
+                {!isUserLogin && (
+                  <>
+                    <span>
+                      Olá, faça seu login <br />
+                      ou cadastre-se
+                    </span>
+                  </>
+                )}
               </a>
               <div className={`dropdown-user ${open ? "active" : "inactive"} `}>
-                <h3>
-                  Para ter uma experiência personalizada, acesse sua conta
-                </h3>
-                <button
-                  onClick={() => {
-                    navigate("/login");
-                  }}
-                >
-                  Entrar
-                </button>
-                <button
-                  onClick={() => {
-                    navigate("/register");
-                  }}
-                >
-                  Cadastre-se
-                </button>
+                {!isUserLogin ? (
+                  <>
+                    <h3>
+                      Para ter uma experiência personalizada, acesse sua conta
+                    </h3>
+                    <button
+                      onClick={() => {
+                        navigate("/login");
+                      }}
+                    >
+                      Entrar
+                    </button>
+                    <button
+                      onClick={() => {
+                        navigate("/register");
+                      }}
+                    >
+                      Cadastre-se
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <DropDownUser />
+                  </>
+                )}
               </div>
             </div>
-            <div className="cart">
+            <div
+              className="cart"
+              onClick={() => {
+                setIsUserLogin(!isUserLogin);
+              }}
+            >
               <i>
                 <FaCartPlus />
               </i>

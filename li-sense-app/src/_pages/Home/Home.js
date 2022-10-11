@@ -1,8 +1,10 @@
 import React from "react";
 import { Components } from "../../_components/Components";
+
 import "./Home.css";
 import { data } from "../../FakeData";
 export default function Home() {
+
   return (
     <>
       <div className="flex flex-col mb-20 items-center ">
