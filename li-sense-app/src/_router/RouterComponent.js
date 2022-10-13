@@ -12,6 +12,7 @@ const RouterComponent = () => {
           <Route exact path="/" element={<Pages.Home />} />
           <Route exact path="/login" element={<Pages.Login />} />
           <Route exact path="/register" element={<Pages.Register />} />
+          <Route exact path="/recovery" element={<Pages.RecoveryPassword />} />
           <Route exact path="/product/:id" element={<Pages.ProductDetails />} />
           <Route exact path="/profile" element={<Pages.Profile />} />
           <Route exact path="/profile/config" element={<Pages.UserConfig />} />
