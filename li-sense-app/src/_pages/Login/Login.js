@@ -49,7 +49,7 @@ export default function Login() {
                 <FaLock size={20} className='icon' />
               </div>
             </div>
-            <p className="esq">Esqueceu a senha?</p>
+            <p className="esq" onClick={() => {navigate('/recovery')}}>Esqueceu a senha?</p>
             <button type="submit" className="btn"> Entrar</button>
           </form>
           <p className="cadastrar">

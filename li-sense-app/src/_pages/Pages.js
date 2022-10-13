@@ -4,6 +4,7 @@ import Register from "./Register/Register";
 import Profile from "./Profile/Profile";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import UserConfig from "./UserConfig/UserConfig";
+import RecoveryPassword from "./RecoveryPassword/RecoveryPassword";
 export const Pages = {
   Home,
   Login,
@@ -11,4 +12,5 @@ export const Pages = {
   Profile,
   ProductDetails,
   UserConfig,
+  RecoveryPassword
 };
