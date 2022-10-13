@@ -10,7 +10,7 @@ registerApplication({
 // registerApplication({
 //   name: "@kinergy/navbar",
 //   app: () => System.import("@kinergy/navbar"),
-//   activeWhen: ["/"]
+//   activeWhen: ["/"]ss
 // });
 
 start({
