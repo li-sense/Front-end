@@ -7,6 +7,7 @@ export default function RecoveryPassword() {
     <>
     <div>
       <h1>Redefinir senha</h1>
+      <a>oi</a>
     </div>
       {
         !isReceivedEmail ?
