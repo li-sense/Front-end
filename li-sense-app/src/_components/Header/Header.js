@@ -1,22 +1,37 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./header.css";
-import Logo from "../../_assets/img/logo.png";
-import DropDownUser from "../DropDownUser/DropDownUser";
-
-import { FaUser, FaCartPlus, FaSearch } from "react-icons/fa";
+import React, { useEffect, useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import './header.css'
+import Logo from '../../_assets/img/logo.png'
+import DropDownRegister from '../DropDown/DropDownRegister'
+import { FaUser, FaCartPlus, FaSearch } from 'react-icons/fa'
 
 export default function Header() {
-  const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
-  const [isUserLogin, setIsUserLogin] = useState(false);
+  const navigate = useNavigate()
+  const [open, setOpen] = useState(false)
+
+  let menuRef = useRef()
+
+  useEffect(() => {
+    let handler = e => {
+      if (!menuRef.current.contains(e.target)) {
+        setOpen(false)
+        console.log('menuRef.current')
+      }
+    }
+    document.addEventListener('mousedown', handler)
+
+    return () => {
+      document.removeEventListener('mousedown', handler)
+    }
+  })
+
   return (
     <>
       <header>
         <div className="logo">
           <a
             onClick={() => {
-              navigate("/");
+              navigate('/')
             }}
           >
             <img src={Logo} alt="" />
@@ -36,58 +51,25 @@ export default function Header() {
         </div>
         <div className="col-cart">
           <nav>
-            <div>
+            <div ref={menuRef}>
               <a
                 onClick={() => {
-                  setOpen(!open);
+                  setOpen(!open)
                 }}
               >
                 <i>
                   <FaUser />
                 </i>
-                {!isUserLogin && (
-                  <>
-                    <span>
-                      Olá, faça seu login <br />
-                      ou cadastre-se
-                    </span>
-                  </>
-                )}
+                <span>
+                  Olá, faça seu login <br />
+                  ou cadastre-se
+                </span>
               </a>
-              <div className={`dropdown-user ${open ? "active" : "inactive"} `}>
-                {!isUserLogin ? (
-                  <>
-                    <h3>
-                      Para ter uma experiência personalizada, acesse sua conta
-                    </h3>
-                    <button
-                      onClick={() => {
-                        navigate("/login");
-                      }}
-                    >
-                      Entrar
-                    </button>
-                    <button
-                      onClick={() => {
-                        navigate("/register");
-                      }}
-                    >
-                      Cadastre-se
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <DropDownUser />
-                  </>
-                )}
+              <div className={`dropdown-user ${open ? 'active' : 'inactive'} `}>
+                <DropDownRegister />
               </div>
             </div>
-            <div
-              className="cart"
-              onClick={() => {
-                setIsUserLogin(!isUserLogin);
-              }}
-            >
+            <div className="cart">
               <i>
                 <FaCartPlus />
               </i>
@@ -97,5 +79,5 @@ export default function Header() {
         </div>
       </header>
     </>
-  );
+  )
 }
