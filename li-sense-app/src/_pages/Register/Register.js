@@ -41,7 +41,7 @@ export default function Register() {
               <span className='span-input1'>Nome completo</span>
               <div className='container-input'>
                 <input
-                  type="email"
+                  type="name"
                   className="form-control"
                   placeholder="nome completo"
                 />
