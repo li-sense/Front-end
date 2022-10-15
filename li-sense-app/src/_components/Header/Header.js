@@ -2,7 +2,8 @@ import React, { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './header.css'
 import Logo from '../../_assets/img/logo.png'
-import DropDownRegister from '../DropDown/DropDownRegister'
+// import DropDownRegister from '../DropDown/DropDownRegister'
+import DropDownUser from '../DropDown/DropDownUser'
 import { FaUser, FaCartPlus, FaSearch } from 'react-icons/fa'
 
 export default function Header() {
@@ -66,7 +67,8 @@ export default function Header() {
                 </span>
               </a>
               <div className={`dropdown-user ${open ? 'active' : 'inactive'} `}>
-                <DropDownRegister />
+                {/* <DropDownRegister /> */}
+                <DropDownUser />
               </div>
             </div>
             <div className="cart">

@@ -1,0 +1,25 @@
+.DropDownUserItens{
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.DropDownUserItens{
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.DropDownUserItens i{
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.DropDownUserItens span{
+  font-size: 15px;
+  font-family: var(--body-fonts);
+  font-weight: 400;
+}
+
+.DropDownUserItens:hover{
+  color: var(--title-color);
+}
