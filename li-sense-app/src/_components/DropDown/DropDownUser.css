@@ -1,0 +1,8 @@
+.DropDownUser h2{
+  font-family: var(--title-fonts);
+  font-size: 18px;
+  text-align: center;
+  color: var(--text-color);
+  border-bottom: 1px solid rgb(239, 239, 239);
+  padding: 10px 0;
+}
