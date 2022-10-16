@@ -2,13 +2,14 @@ import React, { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './header.css'
 import Logo from '../../_assets/img/logo.png'
-// import DropDownRegister from '../DropDown/DropDownRegister'
+import DropDownRegister from '../DropDown/DropDownRegister'
 import DropDownUser from '../DropDown/DropDownUser'
 import { FaUser, FaCartPlus, FaSearch } from 'react-icons/fa'
 
 export default function Header() {
   const navigate = useNavigate()
   const [open, setOpen] = useState(false)
+  const [isUserLogin, setIsUserLogin] = useState(false)
 
   let menuRef = useRef()
 
@@ -61,17 +62,33 @@ export default function Header() {
                 <i>
                   <FaUser />
                 </i>
-                <span>
-                  Olá, faça seu login <br />
-                  ou cadastre-se
-                </span>
+                {!isUserLogin && (
+                  <>
+                    <span>
+                      Olá, faça seu login <br />
+                      ou cadastre-se
+                    </span>
+                  </>
+                )}
               </a>
               <div className={`dropdown-user ${open ? 'active' : 'inactive'} `}>
-                {/* <DropDownRegister /> */}
-                <DropDownUser />
+                {!isUserLogin ? (
+                  <>
+                    <DropDownRegister />
+                  </>
+                ) : (
+                  <>
+                    <DropDownUser />
+                  </>
+                )}
               </div>
             </div>
-            <div className="cart">
+            <div
+              className="cart"
+              onClick={() => {
+                setIsUserLogin(!isUserLogin)
+              }}
+            >
               <i>
                 <FaCartPlus />
               </i>

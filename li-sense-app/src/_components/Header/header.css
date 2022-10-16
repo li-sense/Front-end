@@ -6,7 +6,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 20px;
+  height: 80px;
+  padding: 0 20px;
 }
 
 .logo {
@@ -115,7 +116,7 @@ nav span {
 }
 
 .dropdown-user::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   right: 40px;

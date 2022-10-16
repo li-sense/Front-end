@@ -3,7 +3,7 @@
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  padding: 50px 20px;
+  padding: 32px 20px;
   background-color: var(--color-primary);
 }
 .footer p {
@@ -23,4 +23,18 @@
 .footer-social a:hover {
   color: azure;
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-logo,
+  .footer-central,
+  .footer-social {
+    display: flex;
+  }
 }
