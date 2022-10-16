@@ -7,7 +7,6 @@ export default function SendEmailRecovery(props) {
   return (
     <>
     
-          
       <form className="card-link">
             
               <label htmlFor="send" className='span-send-email'>E-mail para recuperação de senha</label>
