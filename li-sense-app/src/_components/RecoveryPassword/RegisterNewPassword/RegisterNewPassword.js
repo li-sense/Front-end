@@ -1,17 +1,56 @@
-import React from "react";
-
+import React, { useState } from "react";
+import './RegisterNewPassword.css';
+import { FaLock } from "react-icons/fa";
 
 export default function RegisterNewPassword(props) {
-  const { setIsReceivedEmail } = props
+  const { setIsReceivedEmail } = props;
+  const [isShown, setIsSHown] = useState(false);
+  const togglePassword = () => {
+    setIsSHown((isShown) => !isShown);
+  };
   return (
     <>
-      <div className="flex flex-col">
-        Componente de registro de nova senha
-        <button onClick={() => { setIsReceivedEmail(false) }} className='border p-4 m-4 w-48'>
+      <form className="redefinir">
+      <label htmlFor="send-red" className='span-send-redefinir'>Digite nova senha</label>
+             <div className="input-wrapper-campo">
+                <input
+                  id="send"
+                  type={isShown ? "text" :"password"}
+                  className="form-control-redf"
+                  placeholder="nova senha"
+                  checked={isShown}
+                  
+                />
+                <i className="input-icon12"><FaLock size={20} /></i>
+
+              </div>
+               <div className="input-wrapper-campo">
+                <input
+                  id="send"
+                  type={isShown ? "text" :"password"}
+                  className="form-control-redf"
+                  placeholder="repetir senha"
+                  checked={isShown}
+                />
+             
+                <i className="input-icon12"><FaLock size={20}/></i>
+
+              </div>
+              <div className="checkbox-container">
+                
+                  <input
+                    id="checkbox"
+                    type="checkbox"
+                    checked={isShown}
+                    onChange={togglePassword}
+                  />
+                  <label htmlFor="checkbox">Show password?</label>
+                </div>
+        <button onClick={() => { setIsReceivedEmail(false) }} className='btn-redefinir'>
           Redefinir senha
-          
         </button>
-      </div>
+      </form>
+      
     </>
   )
 }
