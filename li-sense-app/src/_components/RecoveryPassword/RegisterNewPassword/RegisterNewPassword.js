@@ -5,7 +5,7 @@ import { FaLock } from "react-icons/fa";
 export default function RegisterNewPassword(props) {
   const { setIsReceivedEmail } = props;
   const [isShown, setIsSHown] = useState(false);
-  const togglePassword = () => {
+  const togglePasswordCad = () => {
     setIsSHown((isShown) => !isShown);
   };
   return (
@@ -42,7 +42,7 @@ export default function RegisterNewPassword(props) {
                     id="checkbox"
                     type="checkbox"
                     checked={isShown}
-                    onChange={togglePassword}
+                    onChange={togglePasswordCad}
                   />
                   <label htmlFor="checkbox">Show password?</label>
                 </div>
