@@ -8,6 +8,6 @@ RUN npm ci
 RUN npm run build
 
 # === RUN === #
-ENV NODE_ENV production
+ENV NODE_ENV homologation
 EXPOSE 3000
 CMD [ "npx", "serve", "build" ]
