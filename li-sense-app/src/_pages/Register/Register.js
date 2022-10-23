@@ -2,19 +2,22 @@ import React, {useState} from 'react';
 import { Form, useNavigate } from 'react-router-dom';
 import './styles.css';
 import Logocentral from "../../_assets/img/logoredonda.png"
+import register from '../../_service/Register';
 import {AiOutlineUserAdd } from 'react-icons/ai' ; 
 import {FiMail} from 'react-icons/fi' ;
 import {FaLock} from 'react-icons/fa' ;
 
-
-
-
 export default function Register() {
   const navigate = useNavigate();
   const [isShown, setIsSHown] = useState(false);
+  const [userData, setUserData] = React.useState({email: '', senha: '', nome:'', sobrenome: '', celular: ''});
   const togglePassword = () => {
     setIsSHown((isShown) => !isShown);
   };
+  const registerUser = (params) => {
+    register(params)
+    navigate('/')
+  }
   return (
     <div className='container-all'>
       <div className='container-texto'>
@@ -32,6 +35,7 @@ export default function Register() {
                   type="name"
                   className="form-control"
                   placeholder="nome completo"
+                  onChange={(event) => {setUserData({email: userData.email, senha: userData.senha, nome:event.target.value, sobrenome: userData.sobrenome, celular: userData.celular})}}
                 />
               <AiOutlineUserAdd size={24} className='icon-register' />
               </div>
@@ -43,6 +47,7 @@ export default function Register() {
                   type="email"
                   className="form-control"
                   placeholder="mail@mail.com"
+                  onChange={(event) => {setUserData({email: event.target.value, senha: userData.senha, nome:userData.nome, sobrenome: userData.sobrenome, celular: userData.celular})}}
                 />
             <FiMail size={24} className='icon-register' />
               </div>
@@ -55,6 +60,7 @@ export default function Register() {
                   className="form-control"
                   placeholder="senha"
                   checked={isShown}
+                  onChange={(event) => {setUserData({email: userData.email, senha:event.target.value, nome:userData.nome, sobrenome: userData.sobrenome, celular: userData.celular})}}
                 />
           <FaLock size={20} className='icon-register' />
               </div>
@@ -67,6 +73,7 @@ export default function Register() {
                   className="form-control"
                   placeholder="repetir senha"
                   checked={isShown}
+                  onChange={(event) => {setUserData({email: userData.email, senha:event.target.value, nome:userData.nome, sobrenome: userData.sobrenome, celular: userData.celular})}}
                 />
           <FaLock size={20} className='icon-register' />
               </div>
@@ -84,7 +91,13 @@ export default function Register() {
         </div>
         
        
-          <button type='submit'className='btn-cad' onClick={() => {navigate('/')}}>Cadastar</button>
+          <button
+          type='submit'
+          className='btn-cad' 
+          onClick={() => {
+            registerUser(userData)
+          }}
+          >Cadastar</button>
           
           {/* 
             o botão de reiniciar por enquanto não tem funcionalidade porque 
