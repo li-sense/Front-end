@@ -1,7 +1,8 @@
-import axios from axios;
+import axios from 'axios';
 import { URL } from "./BaseApp";
 
 const register = async (params, state) => {
+  // console.log('params', params)
   axios.post(URL.register, {
     params
   })
