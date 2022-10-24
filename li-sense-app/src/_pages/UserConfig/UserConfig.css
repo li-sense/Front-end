@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+body {
+overflow: hidden;
+}
 
 .config {
     background: rgb(255, 255, 255);
