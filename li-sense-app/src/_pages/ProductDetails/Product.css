@@ -1,0 +1,12 @@
+.bg {
+  width: 150%;
+  height: 80%;
+  background-size: cover;
+}
+
+.image {
+  width: 50%;
+}
+.description {
+  width: 50%;
+}
