@@ -1,7 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 body {
+
     overflow-x: hidden;
 }
+
+overflow-x: hidden;
+}
+
+
 .config {
     background: rgb(255, 255, 255);
     background: radial-gradient(
