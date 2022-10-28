@@ -1,5 +1,107 @@
-import React from "react";
+import React, { useState } from 'react';
+import './Profile.css';
+export default function Profile(props){
+  const [nome, setNome] = useState(props.nome);
+  const [senha, setSenha] = useState(props.senha);
+  const [email, setEmail] = useState(props.email);
+  const [cpf, setCpf] = useState(props.cpf);
+  const [telefone, setTelefone] = useState(props.telefone);
 
-export default function Profile() {
-  return <>´pagina de perfil</>;
+  return (
+    <div className="container-all">
+      <div className='container-text'>
+        <h1>Painel do Usuário</h1>
+      </div>
+      <div className='mx-auto w-full max-w-[450px]'> 
+        <div className='-mx-auto flex flex-wrap panel-form'>
+          <div className='w-full px-3 sm:w-1/2'>
+            <div className="mb-5">
+              <label 
+                forhmtl='username'
+                className='mb-3 block text-base font-medium'>
+                  Nome completo
+              </label>
+              <input
+                name='username'
+                className='form-control'
+                placeholder={`${nome}`}
+              />
+            </div>
+            <div className='mb-5 desc-input'>
+              Esse é nome como você deverá ser mencionado nas compras ou registros.
+            </div>
+          </div>
+          <div className='w-full px-3 sm:w-1/2'>
+            <div className='mb-5'>
+              <label 
+                forhmtl='email'
+                className='mb-3 block text-base font-medium'>
+                  Email Público
+              </label>
+              <input
+                name='email'
+                className='form-control'
+                placeholder={`${email}@mail.com`}
+              />
+            </div>
+            <div className='mb-5 desc-input'>
+              Você pode adicionar novos emails para facilitar a verificação.
+            </div>
+          </div>
+          <div className='w-full px-3 sm:w-1/2 mb-5'>
+            <label 
+              forhtml='cpf' 
+              className='mb-3 block text-base font-medium'>
+                CPF
+            </label>
+            <div className='form-button'>
+              <button 
+                type='submit'
+                name='cpf'
+                className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
+                onClick={() => {}}>
+                  Alterar o CPF
+              </button>
+            </div>
+          </div>
+          <div className='w-full px-3 sm:w-1/2 mb-5'>
+            <label 
+              forhtml='password' 
+              className='mb-3 block text-base font-medium'>
+                Senha
+            </label>
+            <div className='form-button'>
+              <button
+                type='submit'
+                name='password'
+                className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
+                onClick={() => {}}>
+                  Reiniciar Senha
+              </button>
+            </div> 
+          </div>
+          <div className='w-full px-3 mb-5'>
+            <div className='form-button'>
+              <button
+                type='submit'
+                className='hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 text-center text-base font-semibold text-white outline-none' 
+                onClick={() => {}}>
+                  Torne-se um criador
+              </button>
+            </div>
+          </div>
+          <div className='w-full px-3 mb-5'>
+            <div className="form-button">
+              <button
+                type='submit'
+                className='hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 text-center text-base font-semibold text-white outline-none' 
+                onClick={() => {}}>
+                  Apagar sua conta
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }

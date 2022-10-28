@@ -5,6 +5,8 @@ import Profile from "./Profile/Profile";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import UserConfig from "./UserConfig/UserConfig";
 import RecoveryPassword from "./RecoveryPassword/RecoveryPassword";
+import Checkout from "./Checkout/Checkout";
+import PaymentUserInfo from "./Checkout/PaymentUserInfo/PaymentUserInfo";
 export const Pages = {
   Home,
   Login,
@@ -12,5 +14,7 @@ export const Pages = {
   Profile,
   ProductDetails,
   UserConfig,
-  RecoveryPassword
+  RecoveryPassword,
+  Checkout,
+  PaymentUserInfo
 };

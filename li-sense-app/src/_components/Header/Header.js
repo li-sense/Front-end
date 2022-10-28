@@ -27,6 +27,11 @@ export default function Header() {
     }
   })
 
+  const goToCart = () => {
+    navigate('/cart');
+    setIsUserLogin(!isUserLogin);
+  }
+
   return (
     <>
       <header>
@@ -86,7 +91,7 @@ export default function Header() {
             <div
               className="cart"
               onClick={() => {
-                setIsUserLogin(!isUserLogin)
+                goToCart()
               }}
             >
               <i>
