@@ -8,6 +8,7 @@ import RecoveryPassword from "./RecoveryPassword/RecoveryPassword";
 import Checkout from "./Checkout/Checkout";
 import PaymentUserInfo from "./Checkout/PaymentUserInfo/PaymentUserInfo";
 import Boleto from "./Checkout/Boleto/Boleto";
+import CreditCard from "./Checkout/CreditCard/CreditCard";
 export const Pages = {
   Home,
   Login,
@@ -18,5 +19,6 @@ export const Pages = {
   RecoveryPassword,
   Checkout,
   PaymentUserInfo,
-  Boleto
+  Boleto,
+  CreditCard
 };

@@ -19,6 +19,7 @@ const RouterComponent = () => {
           <Route exact path="/cart" element={<Pages.Checkout />} />
           <Route exact path="/cart/payment" element={<Pages.PaymentUserInfo />} />
           <Route exact path="/cart/payment/boleto" element={<Pages.Boleto />} />
+          <Route exact path="/cart/payment/credit" element={<Pages.CreditCard />} />
         </Routes>
         <Components.Footer />
       </Router>
