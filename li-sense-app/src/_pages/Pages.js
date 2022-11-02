@@ -7,6 +7,7 @@ import UserConfig from "./UserConfig/UserConfig";
 import RecoveryPassword from "./RecoveryPassword/RecoveryPassword";
 import Checkout from "./Checkout/Checkout";
 import PaymentUserInfo from "./Checkout/PaymentUserInfo/PaymentUserInfo";
+import Boleto from "./Checkout/Boleto/Boleto";
 export const Pages = {
   Home,
   Login,
@@ -16,5 +17,6 @@ export const Pages = {
   UserConfig,
   RecoveryPassword,
   Checkout,
-  PaymentUserInfo
+  PaymentUserInfo,
+  Boleto
 };
