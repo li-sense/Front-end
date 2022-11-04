@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function CreditCard() {
+export default function PaymentForm() {
   return (
     <>
-    <div>
-      Form cartao de credito
-    </div>
+      <div className="container-cred">form cartão</div>
     </>
-  )
+  );
 }
