@@ -88,9 +88,7 @@ export default function Register() {
                 />
                 <label htmlFor="checkbox">Show password?</label>
           </div>
-        </div>
-        
-       
+           
           <button
           type='submit'
           className='btn-cad' 
@@ -98,6 +96,9 @@ export default function Register() {
             registerUser(userData)
           }}
           >Cadastar</button>
+        </div>
+        
+      
           
           {/* 
             o botão de reiniciar por enquanto não tem funcionalidade porque 

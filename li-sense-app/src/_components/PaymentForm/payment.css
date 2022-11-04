@@ -1,0 +1,241 @@
+.container-pay{
+    padding: 15% 16% 5% 20%;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top:-160px;
+    background-color: hsl(0, 0%, 98%); 
+}
+
+h1{
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: var(--title-fonts);
+}
+
+.container-form-pay{
+    text-align: center;
+    background-color: 	#eaf1fb;
+    padding: 30px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    
+}
+
+.container-form-pay label{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 15px;
+}
+
+.span-input2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    font-family: var(--body-fonts);
+    font-size: 14px;
+  
+  }
+  
+.estados{
+    display: flex;
+    width: 100%;
+    border-radius: 7px;
+    padding: 11px;
+    font-size: 13px;
+  
+    /* align-items: flex-start; */
+}
+
+.cidades{
+    display: flex;
+    width: 100%;
+    border-radius: 7px;
+    padding: 11px;
+    font-size: 13px;
+}
+.container-form-pay .forms-pay {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.forms-pay input{
+  display: flex;
+  justify-content: start;
+  font-family: var(--body-fonts);
+  font-size: 14px;
+  border: none;
+
+}
+
+.container-form-pay .form-control12{
+    height: 40px;
+    width: 100%;
+    border-radius: 3px; 
+    border-color: transparent;
+    background-color: #ffffff;
+    padding: 10px;
+    align-self: start;
+    border: none;
+    margin-bottom: 25px;
+    
+}
+.icon-pay-n{
+    transform: translateY(-20%);
+    color: #C3C6CF;
+    margin-left: -35px;
+}
+.icon-pay {
+  
+    transform: translateY(-20%);
+    color: #C3C6CF;
+    margin-left: -35px;
+    
+}
+
+.input-container{
+    display: flex;
+    margin-bottom: 15px;
+}
+.input-container-ece{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.input-container-cep{
+    display: flex;
+    margin-bottom: 35px;
+}
+.dat-tel{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.dat-cep{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+   
+}
+
+.form-control-dat-tel{
+    height: 40px;
+    width: 95%;
+    border-radius: 3px; 
+    border-color: transparent;
+    background-color: #ffffff;
+    padding: 10px;
+    align-self: start;
+    border: none;
+    margin-right: 8px;
+}
+.form-control-dat-tel.ml-5{
+    margin-left: 5%;
+}
+.form-control-dat-cep .ml-5{
+    margin-left: 5%;
+}
+
+.span-input2.ml-5{
+    margin-left: 5%;
+}
+
+
+.input-container-cep .form-control-dat-tel{
+    width: 95%;
+}
+
+.div-extra{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+   
+}
+.div-extra .form-control-comp{
+    height: 40px;
+    width: 50%;
+    border-radius: 3px; 
+    border-color: transparent;
+    background-color: #ffffff;
+    padding: 10px;
+    align-self: start;
+    border: none;
+    margin-left: 20px;
+    margin-right: 8px;
+   
+}
+.div-extra .span-input21{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--body-fonts);
+    font-size: 14px;
+    margin-bottom: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.btn-pay{
+    font-family: var(--title-fonts);
+    box-shadow: 5%;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    border-color: transparent;
+    color: aliceblue;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 12px 60px;
+    transition: 0.5s;
+    margin: 0 15px;
+}
+.btn-pay:hover
+{
+   background-color: var(--color-tertiary);
+   color: white;
+ }
+
+ .est-cid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+ }
+
+ .container-form-pay .est-cid .cid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+@media screen and (max-width: 480px) {
+    .container-pay{
+        
+        padding: 45% 5% 5% 5%;
+        width: 100%;  
+    }
+
+    .container-form-pay .form-control12 {
+        width: 100%;
+    }
+   
+
+   }
+   @media screen and (max-width: 600px) {
+    .est-cid{
+        width: 100%;
+     }
+
+   }
