@@ -13,6 +13,9 @@
   padding-bottom: 20px;
 }
 .container-detail {
+  display: grid;
+  gap: 24px;
+
   background: var(--color-background-form);
   padding: 20px;
   border-radius: 5px;
@@ -23,18 +26,14 @@
 
   font-family: var(--body-fonts);
   font-weight: 500;
-  padding-bottom: 10px;
-}
-
-.container-check {
-  border-radius: 5px;
-  background: var(--color-background-form);
-  padding: 20px;
+  border-bottom: 1px solid #62378c30;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 768px) {
   .page-checkout {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 20px;
   }
 }
