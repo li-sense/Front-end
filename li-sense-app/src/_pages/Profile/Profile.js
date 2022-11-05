@@ -13,43 +13,46 @@ export default function Profile(props){
       <div className='text-2xl py-1 px-1 font-bold container-text '>
         <h1>Painel do Usuário</h1>
       </div>
-      <div className=''>
-        <div className='flex-row max-w-2xl py-4 px-5'>
-          <div className='py-2'>
-            <label 
-              forhmtl='username'
-              className='text-base font-medium'>
-                Nome completo
-            </label>
-            <input
-              name='username'
-              className='form-control'
-              placeholder={`${nome}`}
-            />
-            <div className='px-6 text-sm text-justify'>
-              Esse é nome como você deverá ser mencionado nas compras ou registros.
+      <div className='flex-row max-w-4xl justify-center'>
+        <div className='flex flex-row px-5'>
+          <div className='flex-3 py-4 px-5'>
+            <div className='py-2'>
+              <label 
+                forhmtl='username'
+                className='text-base font-medium'>
+                  Nome completo
+              </label>
+              <input
+                name='username'
+                className='form-control'
+                placeholder={`${nome}`}
+              />
+              <div className='px-6 text-sm text-justify'>
+                Esse é nome como você deverá ser mencionado nas compras ou registros.
+              </div>
+            </div>
+            <div className='py-2'>
+              <label 
+                forhmtl='email'
+                className='mb-3 block text-base font-medium'>
+                  Email Público
+              </label>
+              <input
+                name='email'
+                className='form-control'
+                placeholder={`${email}@mail.com`}
+              />
+              <div className='px-6 text-sm text-justify'>
+                Você pode adicionar novos emails para facilitar a verificação.
+              </div>
             </div>
           </div>
-          <div className='py-2'>
-            <label 
-              forhmtl='email'
-              className='mb-3 block text-base font-medium'>
-                Email Público
-            </label>
-            <input
-              name='email'
-              className='form-control'
-              placeholder={`${email}@mail.com`}
-            />
-            <div className='px-6 text-sm text-justify'>
-              Você pode adicionar novos emails para facilitar a verificação.
-            </div>
+          <div className='flex-1 py-4 px-5'>
+            <label forhtml='avatar' className='mb-3 block text-base font-medium'>Foto de Perfil</label> 
+            <img src={Logocentral} name='avatar' className='rounded-full w-[160px] h-[160px]' />
           </div>
         </div>
-        <div>
-          {/* <img className="img1" src={Logocentral} /> */}
-        </div>
-        <div className='flex-column max-w-2xl px-5'>
+        <div className='flex-column px-5'>
           <div className='flex flex-row justify-evenly'>
             <div className='py-4'>
               <label 
@@ -107,7 +110,6 @@ export default function Profile(props){
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   )
