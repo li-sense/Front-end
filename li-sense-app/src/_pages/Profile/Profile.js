@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Profile.css';
+import Logocentral from "../../_assets/img/logoredonda.png";
 export default function Profile(props){
   const [nome, setNome] = useState(props.nome);
   const [senha, setSenha] = useState(props.senha);
@@ -8,79 +9,84 @@ export default function Profile(props){
   const [telefone, setTelefone] = useState(props.telefone);
 
   return (
-    <div className="container-all">
-      <div className='container-text'>
+    <div className="w-screen">
+      <div className='text-2xl py-1 px-1 font-bold container-text '>
         <h1>Painel do Usuário</h1>
       </div>
-      <div className='mx-auto w-full max-w-[450px]'> 
-        <div className='-mx-auto flex flex-wrap panel-form'>
-          <div className='w-full px-3 sm:w-1/2'>
-            <div className="mb-5">
-              <label 
-                forhmtl='username'
-                className='mb-3 block text-base font-medium'>
-                  Nome completo
-              </label>
-              <input
-                name='username'
-                className='form-control'
-                placeholder={`${nome}`}
-              />
-            </div>
-            <div className='mb-5 desc-input'>
+      <div className=''>
+        <div className='flex-row max-w-2xl py-4 px-5'>
+          <div className='py-2'>
+            <label 
+              forhmtl='username'
+              className='text-base font-medium'>
+                Nome completo
+            </label>
+            <input
+              name='username'
+              className='form-control'
+              placeholder={`${nome}`}
+            />
+            <div className='px-6 text-sm text-justify'>
               Esse é nome como você deverá ser mencionado nas compras ou registros.
             </div>
           </div>
-          <div className='w-full px-3 sm:w-1/2'>
-            <div className='mb-5'>
-              <label 
-                forhmtl='email'
-                className='mb-3 block text-base font-medium'>
-                  Email Público
-              </label>
-              <input
-                name='email'
-                className='form-control'
-                placeholder={`${email}@mail.com`}
-              />
-            </div>
-            <div className='mb-5 desc-input'>
+          <div className='py-2'>
+            <label 
+              forhmtl='email'
+              className='mb-3 block text-base font-medium'>
+                Email Público
+            </label>
+            <input
+              name='email'
+              className='form-control'
+              placeholder={`${email}@mail.com`}
+            />
+            <div className='px-6 text-sm text-justify'>
               Você pode adicionar novos emails para facilitar a verificação.
             </div>
           </div>
-          <div className='w-full px-3 sm:w-1/2 mb-5'>
-            <label 
-              forhtml='cpf' 
-              className='mb-3 block text-base font-medium'>
-                CPF
-            </label>
-            <div className='form-button'>
-              <button 
-                type='submit'
-                name='cpf'
-                className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
-                onClick={() => {}}>
-                  Alterar o CPF
-              </button>
+        </div>
+        <div>
+          {/* <img className="img1" src={Logocentral} /> */}
+        </div>
+        <div className='flex-column max-w-2xl px-5'>
+          <div className='flex flex-row justify-evenly'>
+            <div className='py-4'>
+              <label 
+                forhtml='cpf' 
+                className='mb-3 block text-base font-medium'>
+                  CPF
+              </label>
+              <div className='form-button'>
+                <button 
+                  type='submit'
+                  name='cpf'
+                  className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
+                  onClick={() => {}}>
+                    Alterar o CPF
+                </button>
+              </div>
+            </div>
+            <div className='py-4'>
+              <label 
+                forhtml='password' 
+                className='mb-3 block text-base font-medium'>
+                  Senha
+              </label>
+              <div className='form-button'>
+                <button
+                  type='submit'
+                  name='password'
+                  className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
+                  onClick={() => {}}>
+                    Reiniciar Senha
+                </button>
+              </div> 
             </div>
           </div>
-          <div className='w-full px-3 sm:w-1/2 mb-5'>
-            <label 
-              forhtml='password' 
-              className='mb-3 block text-base font-medium'>
-                Senha
-            </label>
-            <div className='form-button'>
-              <button
-                type='submit'
-                name='password'
-                className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
-                onClick={() => {}}>
-                  Reiniciar Senha
-              </button>
-            </div> 
-          </div>
-          <div className='w-full px-3 mb-5'>
+        </div>
+        <div className='p-6 max-w-sm mx-auto'>
+          <div className='py-2'>
             <div className='form-button'>
               <button
                 type='submit'
@@ -90,7 +96,7 @@ export default function Profile(props){
               </button>
             </div>
           </div>
-          <div className='w-full px-3 mb-5'>
+          <div className='py-2'>
             <div className="form-button">
               <button
                 type='submit'
@@ -101,6 +107,7 @@ export default function Profile(props){
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   )
