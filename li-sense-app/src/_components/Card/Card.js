@@ -48,26 +48,27 @@ export default function Card(props) {
           setProduct(data);
         }}
       >
-        <div className="productCard__mediaType">
-          <VscFile className={"productCard__Icon"} />
-        </div>
-        <FaShoppingCart className={"productCard__cart"} />
-        <FaRegBookmark className={"productCard__wishlist"} />
-        
-        <img src={data.url} className="productImage" alt="product-img" />
-
-        <div className="productList">
-          <div className="productCard__Content">
-            <h3 className="productName">{data.name}</h3>
-            <div className="displayStack__1">
-              <div className="productDec">
-                <p className="productDesc">{data.description}</p>
-              </div>
-              <div className="productPrice">
-                <p>{data.price}</p>
-              </div>
-            </div>
+        <div id="icons">
+          <div className="productCard__mediaType">
+            <VscFile className={"productCard__Icon"} />
           </div>
+          <FaShoppingCart className={"productCard__cart"} />
+          <FaRegBookmark className={"productCard__wishlist"} />
+        </div>
+        <img src={data.url} className="productImage" alt="product-img" />
+        <div id="wrapper">
+        </div>
+          <div className="productInfo">
+            <div id="wrap">
+
+              <h3 className="productName">{data.name}</h3>
+            </div>
+          
+
+        </div>
+        <p className="productDesc">{data.description}</p>
+        <div className="productPrice">
+            <p>{data.price}</p>
         </div>
       </div>
     </>
