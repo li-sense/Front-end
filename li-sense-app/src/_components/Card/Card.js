@@ -18,28 +18,21 @@ export default function Card(props) {
           setProduct(data);
         }}
       >
-        {/* <div class="icons"> */}
         <div className="productCard__mediaType">
           <VscFile className={"productCard__typeIcon"} />
         </div>
         <FaShoppingCart className={"productCard__cart"} />
         <FaRegBookmark className={"productCard__wishlist"} />
-        {/* </div> */}
 
         <img src={data.url} className="productImage" alt="product-img" />
-        {/* <div id="wrapper">
-        </div> */}
-          <div className="productInfo">
-            {/* <div id="wrap"> */}
 
-              <h3 className="productName">{data.name}</h3>
-            {/* </div> */}
+        <div className="productNameSpace">
+          <h3 className="productName">{data.name}</h3>
         </div>
 
         <p className="productDesc">{data.description}</p>
-        {/* <div className="productPrice"> */}
-            <p className="productPrice">{data.price}</p>
-        {/* </div> */}
+        <p className="productPrice">{data.price}</p>
+
       </div>
     </>
   );
