@@ -13,7 +13,7 @@ export default function Profile(props){
       <div className='text-2xl py-1 px-1 font-bold container-text '>
         <h1>Painel do Usuário</h1>
       </div>
-      <div className='flex-row max-w-4xl justify-center'>
+      <div className='flex-row max-w-4xl mx-auto'>
         <div className='flex flex-row px-5'>
           <div className='flex-3 py-4 px-5'>
             <div className='py-2'>
