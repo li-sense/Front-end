@@ -1,23 +1,22 @@
-import React from "react";
-import { Components } from "../../_components/Components";
+import React from 'react'
+import { Components } from '../../_components/Components'
 
-import "./Home.css";
-import { data } from "../../FakeData";
+import './Home.css'
+import { data } from '../../FakeData'
 export default function Home() {
-
   return (
     <>
-      <div className="flex flex-col mb-20 items-center ">
-        <div className="mt-10 mb-8">
+      <div className="container-home">
+        <div className="">
           <Components.Filters />
         </div>
-        <div className="flex flex-wrap justify-center">
+        <div className="cards">
           {data.map((_value, key) => (
             <Components.Card data={_value} key={key} />
           ))}
         </div>
-        <button className="mt-4 filter">Ver mais</button>
+        <button className="filter">Ver mais</button>
       </div>
     </>
-  );
+  )
 }
