@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Profile.css';
 import Logocentral from "../../_assets/img/logoredonda.png";
+import LisenseContext from '../../_context/LisenseContext';
+import { useNavigate } from 'react-router-dom';
 export default function Profile(props){
   const [nome, setNome] = useState(props.nome);
   const [senha, setSenha] = useState(props.senha);
   const [email, setEmail] = useState(props.email);
   const [cpf, setCpf] = useState(props.cpf);
   const [telefone, setTelefone] = useState(props.telefone);
+  const { user } = React.useContext(LisenseContext);
 
   return (
     <div className="w-screen">
@@ -29,7 +32,7 @@ export default function Profile(props){
                 <input
                   name='username'
                   className='form-control'
-                  placeholder={`${nome}`}
+                  placeholder={user.profileObj ? user.profileObj.name : ''}
                 />
                 <div className='px-6 text-sm text-justify'>
                   Esse é nome como você deverá ser mencionado nas compras ou registros.
@@ -44,7 +47,7 @@ export default function Profile(props){
                 <input
                   name='email'
                   className='form-control'
-                  placeholder={`${email}@mail.com`}
+                  placeholder={user.profileObj ? user.profileObj.email : ''}
                 />
                 <div className='px-6 text-sm text-justify'>
                   Você pode adicionar novos emails para facilitar a verificação.
@@ -54,7 +57,7 @@ export default function Profile(props){
             <div className='flex-1 py-4 px-5'>
               {/*Componente da foto de perfil não esta otimizado e tende a distorcer com o tamanho da tela */}
               <label forhtml='avatar' className='mb-3 block text-base font-medium'>Foto de Perfil</label> 
-              <img src={Logocentral} name='avatar' className='rounded-full w-[160px] h-[160px]' />
+              <img src={user.profileObj ? user.profileObj.imageUrl : ''} name='avatar' className='rounded-full w-[160px] h-[160px]' />
             </div>
           </div>
         </div>

@@ -6,8 +6,10 @@ import { FaUser } from 'react-icons/fa'
 import { MdOutlineLogout } from 'react-icons/md'
 import { AiFillSetting, AiFillDollarCircle } from 'react-icons/ai'
 
-export default function DropDownUser() {
+
+export default function DropDownUser(props) {
   const navigate = useNavigate()
+
 
   return (
     <>
@@ -42,7 +44,7 @@ export default function DropDownUser() {
             navigate('#')
           }}
         >
-          <DropDownItens icon={<MdOutlineLogout />} text={'Sair da conta'} />
+          <DropDownItens  icon={<MdOutlineLogout />} text={'Sair da conta'} />
         </li>
       </ul>
     </>
