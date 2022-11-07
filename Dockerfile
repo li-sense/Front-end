@@ -4,6 +4,7 @@ WORKDIR /app
 COPY . .
 
 # === BUILD === #
+RUN npm install husky --save-dev
 RUN npm ci
 RUN npm run build
 
