@@ -1,6 +1,6 @@
 export const data = [
   {
-    name: "TEST",
+    name: "TEST COM UMA GRANDE FRASE ENORME MEU DEUS QUE GRANDE",
     price: "R$ 99454.4",
     url: "https://i.pinimg.com/564x/f7/33/46/f73346e8aaf923c2fa915ad281ce9753.jpg",
     description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

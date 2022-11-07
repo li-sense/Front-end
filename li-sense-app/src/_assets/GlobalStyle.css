@@ -14,15 +14,27 @@
   --color-primary: #62378c;
   --color-secondary: #111827;
   --color-tertiary: #cd9042;
-  --color-background: #;
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-hover: rgba(255, 255, 255, 0.739);
+  --color-background: hsl(0, 0%, 98%);
+  --color-background-form: #eaf1fb;
 
   /* fonts*/
   --title-font-size: 1.6rem;
   --subtitle-font-size: 1rem;
 
-  --title-fonts: "Roboto", sans-serif;
-  --body-fonts: "Poppins", sans-serif;
+  --title-fonts: 'Roboto', sans-serif;
+  --body-fonts: 'Poppins', sans-serif;
+
+  --myBlack: #01161e;
+  --myWhite: #f5efef;
+  --myPurple: #802eb0;
+  --myHGray: #4e546a;
+  --myLGray: #f0f0f0;
+  --myBlue: #5871f4;
+  --myRed: #ee7272;
+  --myYellow: #ddbf54;
+  --myGreen: #70df89;
+  --mySubPurple: #8058f4;
 }
