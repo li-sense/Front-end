@@ -17,6 +17,7 @@ const RouterComponent = () => {
           <Route exact path="/product/:id/edit" element={<Pages.EditProduct />} />
           <Route exact path="/profile" element={<Pages.Profile />} />
           <Route exact path="/profile/config" element={<Pages.UserConfig />} />
+          <Route exact path="/profile/beAseller" element={<Pages.BeAseller />} />
           <Route exact path="/cart" element={<Pages.Checkout />} />
           <Route exact path="/cart/payment" element={<Pages.PaymentUserInfo />} />
           <Route exact path="/cart/payment/boleto" element={<Pages.Boleto />} />
