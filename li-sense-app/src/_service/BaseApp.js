@@ -1,7 +1,7 @@
-const login = 'localhost:3000/login';
-const register = 'localhost:3000/registra-usuarios'
+import axios from 'axios';
 
-export const URL = {
-  login,
-  register
-};
+const api = axios.create({
+  baseUrl: 'http://localhost:8000/api/v1/'
+});
+
+export default api;

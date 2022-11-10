@@ -3,6 +3,9 @@ import "./Filter.css";
 
 export default function Filters() {
   const options = ["Categorias", "Promoções", "Legislação"];
+  // Livro
+  // Musica
+
   return (
     <>
       <div className="flex w-full items-center justify-center">
