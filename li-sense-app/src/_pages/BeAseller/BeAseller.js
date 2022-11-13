@@ -20,7 +20,7 @@ export default function BeAseller() {
                 <label 
                   forhmtl='username'
                   className='text-base font-medium'>
-                    Nome completo
+                    Nome do usuário
                 </label>
                 <input
                   name='username'
@@ -78,20 +78,42 @@ export default function BeAseller() {
         <div className='text-xl pt-4 font-extrabold'>
           <h1>Informações do Vendedor</h1>
         </div>
-        <div className='border-2 border-slate-500 rounded-lg my-4'>
-          <div className='p-6 max-w-sm mx-auto'>
-            <div className='py-2'>
-
+        <div className='border-2 border-slate-500 rounded-lg my-4 p-6'>
+          <div className='grid grid-cols-2 space-x-4 justify-center'>
+            <div className='py-4'>
+              <label 
+                forhtml='cpf' 
+                className='text-base font-medium'>
+                  CNPJ
+              </label>
+              <input
+                name='cpnj'
+                className='form-control'
+                placeholder={user.profileObj ? user.profileObj.cpnj : ''}
+              />
             </div>
-            <div className='py-2'>
-              <div className="form-button">
-                <button
-                  type='submit'
-                  className='hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 text-center text-base font-semibold text-white outline-none' 
-                  onClick={() => {}}>
-                    Apagar sua conta
-                </button>
-              </div>
+            <div className='py-4'>
+              <label 
+                forhtml='password' 
+                className='text-base font-medium'>
+                  Nome da Empresa
+              </label>
+              <input
+                name='password'
+                className='form-control'
+                placeholder={user.profileObj ? user.profileObj.incname : ''}
+              />
+            </div>
+          </div>
+          <div className='flex justify-center'>
+            <div className='form-button'>
+              <button
+                type='submit'
+                name='password'
+                className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
+                onClick={() => {}}>
+                  Torne-se um vendedor
+              </button>
             </div>
           </div>
         </div>
