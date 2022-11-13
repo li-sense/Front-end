@@ -65,39 +65,47 @@ export default function Profile(props){
           <h1>Informações Privadas</h1>
         </div>
         <div className='border-2 border-slate-500 rounded-lg my-4'>
-          <div className='flex-column px-5'>
-            <div className='flex flex-row justify-evenly'>
-              <div className='py-4'>
-                <label 
-                  forhtml='cpf' 
-                  className='mb-3 block text-base font-medium'>
-                    CPF
-                </label>
+          <div className='p-8 grid grid-cols-2 gap-4'>
+            <div className=''>
+              <label 
+                forhtml='cpf' 
+                className='mb-3 text-base font-medium'>
+                  CPF
+              </label>
+              <div className='grid grid-cols-2 gap-4 items-center'>
+                <input
+                  name='cpf'
+                  className='form-control'
+                  placeholder={user.profileObj ? user.profileObj.cpf : ''}
+                />
                 <div className='form-button'>
                   <button 
-                    type='submit'
-                    name='cpf'
                     className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
                     onClick={() => {}}>
                       Alterar o CPF
                   </button>
                 </div>
               </div>
-              <div className='py-4'>
-                <label 
-                  forhtml='password' 
-                  className='mb-3 block text-base font-medium'>
-                    Senha
-                </label>
+            </div>
+            <div className=''>
+              <label 
+                forhtml='password' 
+                className='mb-3 text-base font-medium'>
+                  Senha
+              </label>
+              <div className='grid grid-cols-2 gap-4 items-center'>
+                <input
+                  name='password' type='password'
+                  className='form-control '
+                  placeholder={user.profileObj ? user.profileObj.password : ''}
+                />
                 <div className='form-button'>
-                  <button
-                    type='submit'
-                    name='password'
+                  <button 
                     className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
                     onClick={() => {}}>
-                      Reiniciar Senha
+                      Resetar senha
                   </button>
-                </div> 
+                </div>
               </div>
             </div>
           </div>
