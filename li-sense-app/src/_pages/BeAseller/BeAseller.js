@@ -67,7 +67,7 @@ export default function BeAseller() {
                 </div>
               </div>
             </div>
-            <div className='lg:col-start-5 col-start-3 py-12 px-6 '>
+            <div className='lg:col-start-5 col-start-3 py-14 px-6'>
               <img 
                 name='avatar'
                 className='rounded-full w-[240px] h-[240px]'
