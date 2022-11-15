@@ -22,5 +22,5 @@ export const Pages = {
   PaymentUserInfo,
   Boleto,
   CreditCard,
-  EditProduct
+  EditProduct,
 };

@@ -53,6 +53,7 @@ h1{
     color: white;
     font-family: var(--title-fonts);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .container-button-res:hover{
