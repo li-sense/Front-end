@@ -9,6 +9,7 @@ import Checkout from "./Checkout/Checkout";
 import PaymentUserInfo from "./Checkout/PaymentUserInfo/PaymentUserInfo";
 import Boleto from "./Checkout/Boleto/Boleto";
 import CreditCard from "./Checkout/CreditCard/CreditCard";
+import BeAseller from "./BeAseller/BeAseller";
 import EditProduct from "./EditProduct/EditProduct";
 import SearchProduct from "./SearchProduct/SearchProduct";
 export const Pages = {
@@ -25,4 +26,6 @@ export const Pages = {
   CreditCard,
   EditProduct,
   SearchProduct
+  BeAseller,
+  EditProduct
 };
