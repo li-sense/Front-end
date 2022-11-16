@@ -10,8 +10,6 @@ import userLogin from "../../_service/userLogin";
 import { GoogleLogin } from "react-google-login";
 import { gapi } from "gapi-script";
 import { clientId } from "../../_auth/LoginGoogle";
-// import Logobackground from "../../_assets/img/tela6.png";
-// import Logofinal from "../../_assets/img/logoc.png";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -30,11 +28,10 @@ export default function Login() {
 
   const onSuccess = (res) => {
     console.log("LOGIN SUCCESS", res);
-    setUser(res)
-    if(res) {
+    setUser(res);
+    if (res) {
       navigate("/profile");
     }
-    
   };
 
   const onFailure = (res) => {
@@ -119,12 +116,12 @@ export default function Login() {
           <p className="entarg">
             <a>Ou</a>
           </p>
-          <button type="submit" className="btn1">
+          <button type="submit" className="btn1G">
             <div className="content-btn1">
               <GoogleLogin
                 clientId={clientId}
                 buttonText="Login"
-                onSuccess={(onSuccess)}
+                onSuccess={onSuccess}
                 onFailure={onFailure}
                 cookiePolicy={"single_host_origin"}
                 isSignedIn={true}

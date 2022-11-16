@@ -23,6 +23,7 @@ export const Pages = {
   PaymentUserInfo,
   Boleto,
   CreditCard,
+  EditProduct,
   BeAseller,
   EditProduct
 };
