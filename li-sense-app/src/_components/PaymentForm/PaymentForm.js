@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./payment.css";
 import { useNavigate } from "react-router-dom";
 import { BsCreditCardFill, BsFillCreditCard2FrontFill } from "react-icons/bs";
+import { BiArrowBack } from "react-icons/bi";
 
 export default function PaymentForm() {
   const navigate = useNavigate();
@@ -20,6 +21,15 @@ export default function PaymentForm() {
   return (
     <>
       <div className="container-pay">
+        <i>
+          <BiArrowBack
+            size={25}
+            className="icon-caixa"
+            onClick={() => {
+              navigate("/cart");
+            }}
+          />
+        </i>
         <div className="container-form-pay">
           {/* <h1> Adicionar nova forma de pagamento</h1> */}
           {/* <img className="img-cartao" src={Cartao} /> */}
