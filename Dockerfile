@@ -1,14 +1,14 @@
-# === CONFIGURE === #
+# CONFIGURE
 FROM node:16-alpine
 WORKDIR /app
 COPY . .
 
-# === BUILD === #
+# BUILD
 RUN npm install husky --save-dev
-RUN npm ci
+RUN npm install react-google-login
+RUN npm install gapi-script
+RUN npm install
 RUN npm run build
 
-# === RUN === #
-ENV NODE_ENV homologation
-EXPOSE 3000
-CMD [ "npx", "serve", "build" ]
+# RUN
+CMD [ "npm", "start" ]

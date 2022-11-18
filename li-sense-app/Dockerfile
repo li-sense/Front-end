@@ -1,24 +1,14 @@
-FROM node:16-alpine AS development
-ENV NODE_ENV development
-
-# Add a work directory
+# CONFIGURE
+FROM node:16-alpine
 WORKDIR /app
-
-# Cache and install dependencies
-COPY package.json .
-COPY yarn.lock .
-
-# Copy app files
 COPY . .
 
-# === BUILD === #
+# BUILD
 RUN npm install husky --save-dev
-RUN npm ci
+RUN npm install react-google-login
+RUN npm install gapi-script
+RUN npm install
 RUN npm run build
 
-# Expose port
-EXPOSE 8080
-
-# Start the app
+# RUN
 CMD [ "npm", "start" ]
-CMD [ "npm", "start", "--", "--port", "8080" ]
