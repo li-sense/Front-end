@@ -11,6 +11,7 @@ import Boleto from "./Checkout/Boleto/Boleto";
 import CreditCard from "./Checkout/CreditCard/CreditCard";
 import BeAseller from "./BeAseller/BeAseller";
 import EditProduct from "./EditProduct/EditProduct";
+import SearchProduct from "./SearchProduct/SearchProduct";
 export const Pages = {
   Home,
   Login,
@@ -24,6 +25,7 @@ export const Pages = {
   Boleto,
   CreditCard,
   EditProduct,
+  SearchProduct
   BeAseller,
   EditProduct
 };
