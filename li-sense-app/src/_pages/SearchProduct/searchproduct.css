@@ -20,3 +20,22 @@
   flex-direction: column;
   gap: 40px;
 }
+
+/* @media (max-width: 992px) {
+} */
+
+@media (max-width: 768px) {
+  .serarch-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-product-left {
+    display: none;
+  }
+}
+
+/* @media (max-width: 576px) {
+}
+
+@media (max-width: 480px) {
+} */

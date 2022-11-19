@@ -16,7 +16,7 @@ export default function Product() {
             <RiStarSFill />
             <RiStarSFill />
             <RiStarSFill />
-            <span>50 valiações</span>
+            <span>50 avaliações</span>
           </div>
 
           <h2>
