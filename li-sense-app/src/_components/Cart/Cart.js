@@ -18,18 +18,6 @@ export default function Cart() {
         </div>
         <div class="price">R$ 2.199,99</div>
       </div>
-
-      <div class="list-content">
-        <div class="product-detail">
-          <img src="https://images-americanas.b2w.io/produtos/01/00/img/3119794/1/3119794119_1SZ.jpg" />
-          <div class="name-detail">
-            <h2>Cadeira Gamer Cinza Reclinável e Giratória GT9 Max - DPX</h2>
-            <h3>Vendido por: Nikko BR</h3>
-            <p>Remover</p>
-          </div>
-        </div>
-        <div class="price">R$ 999,99</div>
-      </div>
     </>
   )
 }

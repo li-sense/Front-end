@@ -1,0 +1,49 @@
+.search {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 20px;
+}
+.search h1 {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--body-fonts);
+}
+
+.search-categorias {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.search-categorias h2,
+.search-price h2 {
+  font-size: 16;
+  font-weight: 500;
+  font-family: var(--body-fonts);
+  padding-bottom: 10px;
+  color: rgb(51, 51, 51);
+}
+.search-categorias ul,
+.search-price ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.search-categorias ul li a,
+.search-price ul li a {
+  font-size: 14px;
+  font-family: var(--body-fonts);
+  font-weight: 400;
+  cursor: pointer;
+}
+.search-categorias ul li a:hover,
+.search-price ul li a:hover {
+  color: var(--color-primary);
+}
+
+.search-price {
+  padding: 20px 0;
+}
