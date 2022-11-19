@@ -35,12 +35,12 @@ export default function ProductDetails() {
               <p class="field_desc">Vendido por: {currentProduct.vendor}</p>
             </div>
           <div className="frame">
-            <p>Valor para compra em difinitivo:</p>
+            <p>Valor para compra em definitivo:</p>
             <p className="texto-prod">{currentProduct.price}</p>
             <div>
               
             </div>
-            <button class="buy">Adquirir Licensa</button>
+            <button class="buy">Adquirir Licença</button>
           </div>
         </div>
       </div>
