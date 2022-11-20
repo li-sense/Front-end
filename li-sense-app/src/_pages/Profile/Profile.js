@@ -14,7 +14,7 @@ export default function Profile(props){
   return (
     <div className="w-screen">
       <div className='flex-row max-w-4xl mx-auto py-6'>
-        <div className='info-panel border-2 border-slate-500 rounded-lg my-4'>
+        <div className='panel-detail my-4'>
           <div className='text-xl font-extrabold pt-3 px-5'>
             <h1>Informações Privadas</h1>
           </div>
@@ -101,7 +101,7 @@ export default function Profile(props){
             </div>
           </div>
         </div>
-        <div className='border-2 border-slate-500 rounded-lg my-4'>
+        <div className='panel-detail my-4'>
           <div className='text-xl font-extrabold pt-3 px-5'>
             <h1>Informações Públicas</h1>
           </div>
@@ -121,9 +121,9 @@ export default function Profile(props){
                 rows='5'
                 className='form-control block w-full text-sm'
               />
-              {/* colocar o dropdown de cidade aqui  */}
             </div> 
-            <div className='py-2'>
+            
+            {/* <div className='py-2'>
               <label
                 forhmtl='tags'
                 className='text-base font-medium'>
@@ -133,8 +133,46 @@ export default function Profile(props){
                 name='tags'
                 className='form-control'
               />
+            </div> */}
+          </div> 
+        </div>
+        <div className='panel-detail my-4'>
+          <div className='text-xl font-extrabold pt-3 px-5'>
+            <h1>Informações da Empresa</h1>
+          </div>
+          <div className='grid grid-cols-2 gap-4 px-5'>
+            <div className=''>
+              <label 
+                forhtml='password' 
+                className='mb-3 text-base font-medium'>
+                  Nome da Empresa
+              </label>
+              <div className='flex gap-4 items-center'>
+                <input
+                  name='password' type='password'
+                  className='form-control '
+                  placeholder={'Torne-se um Vendedor'}
+                />
+              </div>
             </div>
-          </div>          
+            <div className=''>
+              <label 
+                forhtml='cnpj' 
+                className='mb-3 text-base font-medium'>
+                  CNPJ
+              </label>
+              <div className='flex gap-4 items-center'>
+                <input
+                  name='cnpj'
+                  className='form-control'
+                  placeholder={'Torne-se um Vendedor'}
+                />
+              </div>
+            </div>
+          </div>
+          <div className='flex justify-center py-4'>
+            <button className='submit'>Torne-se um Vendedor</button>
+          </div>         
         </div>
       </div>
     </div>
