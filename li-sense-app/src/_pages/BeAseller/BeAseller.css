@@ -1,0 +1,22 @@
+.panel-detail {
+    border-radius: 8px;
+    border: 2px solid var(--color-secondary);
+    background-color: var(--color-background-form);
+}
+
+.submit {
+    font-family: var(--title-fonts);
+    box-shadow: 5%;
+    background-color: var(--color-primary);
+    color: #ffff;
+    padding: 10px 20px;
+    border-color: transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+}
+.submit:hover {
+    background: var(--color-tertiary);
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}

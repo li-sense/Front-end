@@ -1,4 +1,5 @@
 import LisenseContext from '../../_context/LisenseContext';
+import './BeAseller.css';
 import React from "react";
 
 export default function BeAseller() {
@@ -6,14 +7,14 @@ export default function BeAseller() {
 
   return (
     <div className="w-screen">
-      <div className='text-2xl py-1 px-1 font-bold container-text'>
-        <h1>Torne-se um Vendedor</h1>
-      </div>
       <div className='flex-row max-w-4xl mx-auto py-6'>
+        <div className='text-2xl py-1 px-1 font-bold container-text'>
+          <h1>Torne-se um Vendedor</h1>
+        </div>
         <div className='text-xl pt-4 font-extrabold'>
           <h1>Informações do Usuário</h1>
         </div>
-        <div className='border-2 border-slate-500 rounded-lg my-4'>
+        <div className='panel-detail my-4'>
           <div className='grid grid-cols-6'>
             <div className='lg:col-span-4 col-span-6 p-6'>
               <div className='py-2'>
@@ -75,10 +76,10 @@ export default function BeAseller() {
             </div>
           </div>
         </div>
-        <div className='text-xl pt-4 font-extrabold'>
-          <h1>Informações do Vendedor</h1>
-        </div>
-        <div className='border-2 border-slate-500 rounded-lg my-4 p-6'>
+        <div className='panel-detail my-4 p-6'>
+          <div className='text-xl pt-4 font-extrabold'>
+            <h1>Informações do Vendedor</h1>
+          </div>
           <div className='grid grid-cols-2 space-x-4 justify-center'>
             <div className='py-4'>
               <label 
@@ -106,15 +107,7 @@ export default function BeAseller() {
             </div>
           </div>
           <div className='flex justify-center'>
-            <div className='form-button'>
-              <button
-                type='submit'
-                name='password'
-                className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
-                onClick={() => {}}>
-                  Torne-se um vendedor
-              </button>
-            </div>
+            <button className="submit">Torne-se um Vendedor</button>
           </div>
         </div>
       </div>
