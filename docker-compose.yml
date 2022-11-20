@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  front-1:
+    container_name: front-externo
+    build: .
+    ports:
+      - "9000:9000"
+
+  front-2:
+    container_name: front-interno
+    build:
+      context: ./li-sense-app
+    ports:
+      - "8080:8080"
