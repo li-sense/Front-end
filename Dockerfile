@@ -10,5 +10,7 @@ RUN npm install gapi-script
 RUN npm install
 RUN npm run build
 
+EXPOSE 9000
+
 # RUN
 CMD [ "npm", "start" ]
