@@ -11,38 +11,38 @@ export default function ProductDetails() {
     <>
       <div className="container-product">
         <div className="container-image-product">
-          <div className="container-image-prod">
-            <img className="d-img" src={currentProduct.url} />
-          </div>
+          {/* <div className="container-image-prod"> */}
+          <img className="img-details" src={currentProduct.url} />
+          {/* </div> */}
         </div>
-
 
         <div className="container-product-details">
-        <div className="container-wishlist-icon">
-          <FaRegBookmark className={"productCard__wishlist"} />
-        </div>
+          <div className="container-wishlist-icon">
+            <FaRegBookmark className={"productCard__wishlist"} />
+          </div>
 
           <div className="h1-title-p">
             <h1>{currentProduct.name}</h1>
           </div>
           <hr class="solid"></hr>
-            <div className="container-info-box">
-              <p class="field-info">Id do produto: {currentProduct.id}</p>
-              <p class="field-info">
-                Tipo de licença: {currentProduct.sale_type}
-              </p>
-              <p class="field-info">Vendido por: {currentProduct.vendor}</p>
-            </div>
+          <div className="container-info-box">
+            <p class="field-info">Id do produto: {currentProduct.id}</p>
+            <p class="field-info">
+              Tipo de licença: {currentProduct.sale_type}
+            </p>
+            <p class="field-info">Vendido por: {currentProduct.vendor}</p>
+          </div>
           <div className="container-sale-box">
-            <p>Valor para compra em definitivo:</p>
+            <span>
+              <p>Valor para compra em definitivo:</p>
+            </span>
             <p className="sale-price">{currentProduct.price}</p>
-            <div>
-              
-            </div>
+            <div></div>
             <button class="buy-button">Adquirir Licença</button>
           </div>
         </div>
       </div>
+
 
       <div className="rest">
         <hr class="solid"></hr>
@@ -50,8 +50,8 @@ export default function ProductDetails() {
           <p className="title-desc">Descrição:</p>
           {currentProduct.description}
         </p>
-
       </div>
+      <hr class="solid"></hr>
     </>
   );
 }
