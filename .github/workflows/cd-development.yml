@@ -1,8 +1,8 @@
 name: CD-development
 
 on:
-  pull_request:
-    branches: [ "mfe-dev" ]
+  push:
+    branches: [ "feature-dc-front-cd" ]
     
 
 jobs:
