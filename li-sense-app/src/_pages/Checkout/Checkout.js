@@ -15,6 +15,9 @@ export default function Checkout() {
               <div>Preço</div>
             </div>
             <Cart />
+            <Cart />
+            <Cart />
+            <Cart />
           </div>
         </div>
         <div class="container-check">
