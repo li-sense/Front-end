@@ -10,44 +10,44 @@ export default function ProductDetails() {
   return (
     <>
       <div className="container-product">
-        {/* <div className="container-image-row">Cachorro</div> */}
         <div className="container-image-product">
-          <div className="carrossel"></div>
           <div className="container-image-prod">
-            <img className="bg" src={currentProduct.url} />
+            <img className="d-img" src={currentProduct.url} />
           </div>
         </div>
-        <div className="container-text-details">
-        <div className="product-details-wishlist">
-          <FaRegBookmark className={"productCard__wishlist"} />
 
+
+        <div className="container-product-details">
+        <div className="container-wishlist-icon">
+          <FaRegBookmark className={"productCard__wishlist"} />
         </div>
 
           <div className="h1-title-p">
             <h1>{currentProduct.name}</h1>
           </div>
           <hr class="solid"></hr>
-            <div className="info">
-              <p class="field_desc">Id do produto: {currentProduct.id}</p>
-              <p class="field_desc">
+            <div className="container-info-box">
+              <p class="field-info">Id do produto: {currentProduct.id}</p>
+              <p class="field-info">
                 Tipo de licença: {currentProduct.sale_type}
               </p>
-              <p class="field_desc">Vendido por: {currentProduct.vendor}</p>
+              <p class="field-info">Vendido por: {currentProduct.vendor}</p>
             </div>
-          <div className="frame">
+          <div className="container-sale-box">
             <p>Valor para compra em definitivo:</p>
-            <p className="texto-prod">{currentProduct.price}</p>
+            <p className="sale-price">{currentProduct.price}</p>
             <div>
               
             </div>
-            <button class="buy">Adquirir Licença</button>
+            <button class="buy-button">Adquirir Licença</button>
           </div>
         </div>
       </div>
+
       <div className="rest">
         <hr class="solid"></hr>
-        <p className="details-prod">
-          <p className="desc-title">Descrição:</p>
+        <p className="details-product">
+          <p className="title-desc">Descrição:</p>
           {currentProduct.description}
         </p>
 
