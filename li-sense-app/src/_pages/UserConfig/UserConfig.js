@@ -1,10 +1,12 @@
 import React from "react";
+import "./UserConfig.css";
+import Form from "./components/Form";
 
 export default function UserConfig() {
   return (
     <>
-      <div>
-        tela de configurações
+      <div className="config">
+        <Form />
       </div>
     </>
   );

@@ -160,6 +160,8 @@ nav span {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    height: 110px;
+    padding: 15px 20px;
   }
 
   .logo {

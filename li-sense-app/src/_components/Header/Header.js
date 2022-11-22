@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import LisenseContext from '../../_context/LisenseContext'
 import './header.css'
 import Logo from '../../_assets/img/logo.png'
 import DropDownRegister from '../DropDown/DropDownRegister'
@@ -11,7 +12,7 @@ export default function Header() {
   const navigate = useNavigate()
   const [open, setOpen] = useState(false)
   const [isUserLogin, setIsUserLogin] = useState(false)
-
+  const { user } = React.useContext(LisenseContext)
   let menuRef = useRef()
 
   useEffect(() => {
@@ -27,6 +28,11 @@ export default function Header() {
       document.removeEventListener('mousedown', handler)
     }
   })
+
+  const goToCart = () => {
+    navigate('/cart');
+    setIsUserLogin(!isUserLogin);
+  }
 
   return (
     <>
@@ -63,7 +69,7 @@ export default function Header() {
                 <i>
                   <FaUser />
                 </i>
-                {!isUserLogin && (
+                {!user && (
                   <>
                     <span>
                       Olá, faça seu login <br />
@@ -73,13 +79,13 @@ export default function Header() {
                 )}
               </a>
               <div className={`dropdown-user ${open ? 'active' : 'inactive'} `}>
-                {!isUserLogin ? (
+                {!user ? (
                   <>
                     <DropDownRegister />
                   </>
                 ) : (
                   <>
-                    <DropDownUser />
+                    <DropDownUser/>
                   </>
                 )}
               </div>
@@ -87,7 +93,7 @@ export default function Header() {
             <div
               className="cart"
               onClick={() => {
-                setIsUserLogin(!isUserLogin)
+                goToCart()
               }}
             >
               <i>
