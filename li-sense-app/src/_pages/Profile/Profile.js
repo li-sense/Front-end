@@ -13,14 +13,11 @@ export default function Profile(props){
 
   return (
     <div className="w-screen">
-      <div className='text-2xl py-1 px-1 font-bold container-text'>
-        <h1>Painel do Usuário</h1>
-      </div>
       <div className='flex-row max-w-4xl mx-auto py-6'>
-        <div className='text-xl pt-4 font-extrabold'>
-          <h1>Informações Públicas</h1>
-        </div>
-        <div className='border-2 border-slate-500 rounded-lg my-4'>
+        <div className='panel-detail my-4'>
+          <div className='text-xl font-extrabold pt-3 px-5'>
+            <h1>Informações Privadas</h1>
+          </div>
           <div className='flex flex-row px-5'>
             <div className='flex-3 py-4 px-5'>
               <div className='py-2'>
@@ -57,77 +54,125 @@ export default function Profile(props){
             <div className='flex-1 py-4 px-5'>
               {/*Componente da foto de perfil não esta otimizado e tende a distorcer com o tamanho da tela */}
               <label forhtml='avatar' className='mb-3 block text-base font-medium'>Foto de Perfil</label> 
-              <img src={user.profileObj ? user.profileObj.imageUrl : ''} name='avatar' className='rounded-full w-[160px] h-[160px]' />
+              <div>
+                <label className="profile-picture" for="profile-picture-input" tabIndex="0">
+                  <span className="profile-picture-image">Escolher nova foto</span>
+                </label>
+                <input
+                  onchange="readURL(this);"
+                  type="file"
+                  name="profile-picture-input"
+                  id="profile-picture-input"
+                  multiple
+                ></input>
+              </div>
             </div>
           </div>
-        </div>
-        <div className='text-xl pt-4 font-extrabold'>
-          <h1>Informações Privadas</h1>
-        </div>
-        <div className='border-2 border-slate-500 rounded-lg my-4'>
-          <div className='flex-column px-5'>
-            <div className='flex flex-row justify-evenly'>
-              <div className='py-4'>
+          <div className='pb-8 px-5'>
+            <div className='grid grid-cols-2 gap-4 px-5'>
+              <div className=''>
                 <label 
                   forhtml='cpf' 
-                  className='mb-3 block text-base font-medium'>
+                  className='mb-3 text-base font-medium'>
                     CPF
                 </label>
-                <div className='form-button'>
-                  <button 
-                    type='submit'
+                <div className='flex gap-4 items-center'>
+                  <input
                     name='cpf'
-                    className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
-                    onClick={() => {}}>
-                      Alterar o CPF
-                  </button>
+                    className='form-control'
+                    placeholder={user.profileObj ? user.profileObj.cpf : ''}
+                  />
                 </div>
               </div>
-              <div className='py-4'>
+              <div className=''>
                 <label 
                   forhtml='password' 
-                  className='mb-3 block text-base font-medium'>
+                  className='mb-3 text-base font-medium'>
                     Senha
                 </label>
-                <div className='form-button'>
-                  <button
-                    type='submit'
-                    name='password'
-                    className='hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none' 
-                    onClick={() => {}}>
-                      Reiniciar Senha
-                  </button>
-                </div> 
+                <div className='flex gap-4 items-center'>
+                  <input
+                    name='password' type='password'
+                    className='form-control '
+                    placeholder={user.profileObj ? user.profileObj.password : ''}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className='text-xl pt-4 font-extrabold'>
-          <h1>Configurações da Conta</h1>
+        <div className='panel-detail my-4'>
+          <div className='text-xl font-extrabold pt-3 px-5'>
+            <h1>Informações Públicas</h1>
+          </div>
+          <div className='grid grid-cols-5 gap-4 py-4 px-5'>
+            <div className='col-span-2'>
+              <label>Nome de Usuário</label>
+              <input
+                name='username'
+                className='form-control'
+                placeholder={user.profileObj ? user.profileObj.name : ''}
+              />
+            </div>
+            <div className='col-span-3'>
+              <label>Descrição Pessoal</label>
+              <textarea 
+                name='description'
+                rows='5'
+                className='form-control block w-full text-sm'
+              />
+            </div> 
+            
+            {/* <div className='py-2'>
+              <label
+                forhmtl='tags'
+                className='text-base font-medium'>
+                  Categorias
+              </label>
+              <input
+                name='tags'
+                className='form-control'
+              />
+            </div> */}
+          </div> 
         </div>
-        <div className='border-2 border-slate-500 rounded-lg my-4'>
-          <div className='p-6 max-w-sm mx-auto'>
-            <div className='py-2'>
-              <div className='form-button'>
-                <button
-                  type='submit'
-                  className='hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 text-center text-base font-semibold text-white outline-none' 
-                  onClick={() => {}}>
-                    Torne-se um criador
-                </button>
+        <div className='panel-detail my-4'>
+          <div className='text-xl font-extrabold pt-3 px-5'>
+            <h1>Informações da Empresa</h1>
+          </div>
+          <div className='grid grid-cols-2 gap-4 px-5'>
+            <div className=''>
+              <label 
+                forhtml='password' 
+                className='mb-3 text-base font-medium'>
+                  Nome da Empresa
+              </label>
+              <div className='flex gap-4 items-center'>
+                <input
+                  name='password' type='password'
+                  className='form-control '
+                  placeholder={'Torne-se um Vendedor'}
+                />
               </div>
             </div>
-            <div className='py-2'>
-              <div className="form-button">
-                <button
-                  type='submit'
-                  className='hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 text-center text-base font-semibold text-white outline-none' 
-                  onClick={() => {}}>
-                    Apagar sua conta
-                </button>
+            <div className=''>
+              <label 
+                forhtml='cnpj' 
+                className='mb-3 text-base font-medium'>
+                  CNPJ
+              </label>
+              <div className='flex gap-4 items-center'>
+                <input
+                  name='cnpj'
+                  className='form-control'
+                  placeholder={'Torne-se um Vendedor'}
+                />
               </div>
             </div>
           </div>
+          <div className='flex justify-center py-4'>
+            <button className='submit'>Torne-se um Vendedor</button>
+          </div>         
         </div>
       </div>
     </div>
