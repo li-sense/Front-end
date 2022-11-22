@@ -19,7 +19,6 @@ const menu = () => {
     <div
 
     >
-      
       <Button
         aria-controls="simple-menu"
         aria-haspopup="true"
@@ -40,8 +39,6 @@ const menu = () => {
         <MenuItem onClick={handleClose}>Pesquisar</MenuItem>
         <MenuItem onClick={handleClose}>Tornar-se vendedor</MenuItem>
         <MenuItem onClick={handleClose}>Sair</MenuItem>
-      
-      
       </Menu>
     </div>
   );
