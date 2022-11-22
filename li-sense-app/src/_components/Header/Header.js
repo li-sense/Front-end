@@ -5,6 +5,7 @@ import Logo from '../../_assets/img/logo.png'
 import DropDownRegister from '../DropDown/DropDownRegister'
 import DropDownUser from '../DropDown/DropDownUser'
 import { FaUser, FaCartPlus, FaSearch } from 'react-icons/fa'
+import Menu from '../Menu/Menu'
 
 export default function Header() {
   const navigate = useNavigate()
@@ -96,6 +97,7 @@ export default function Header() {
             </div>
           </nav>
         </div>
+        <Menu />
       </header>
     </>
   )
