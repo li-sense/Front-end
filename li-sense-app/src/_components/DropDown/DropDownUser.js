@@ -31,7 +31,7 @@ export default function DropDownUser(props) {
         </li>
         <li
           onClick={() => {
-            navigate('#')
+            navigate('/profile/beAseller')
           }}
         >
           <DropDownItens

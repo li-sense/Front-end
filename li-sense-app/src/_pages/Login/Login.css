@@ -186,7 +186,7 @@ p{
  font-size: 14px;
  margin-top: 10px;
 }
-.content-btn1{
+/* .content-btn1{
  display: flex;
  flex-direction: row;
  justify-content: space-around;
@@ -195,7 +195,7 @@ p{
  border-radius: 5px;
  padding: 10px;
  
-}
+} */
 
 
 @media screen and (max-width: 400px) {
@@ -221,6 +221,10 @@ p{
      display: grid;
      grid-template-columns: 1fr;
    }
+   .containerLogin{
+    margin-top: 0;
+   }
+  
  }
  
  @media screen and (max-width: 783px) {
@@ -230,16 +234,28 @@ p{
      text-align: center;
    }
    
+   .containerLogin{
+    margin-top: 0;
+   }
   
  }
-
+ @media screen and (max-width: 850px) {
+  
+  .containerLogin{
+   margin-top: 0;
+  }
+ 
+}
 @media screen and (max-width: 1024px){
  
  .textoLogin span{
    margin-left: 20px;
    text-align: center;
  }
- 
+ .containerLogin{
+  margin-top: 0;
+ }
+
  }
 
  @media screen and (max-width: 1280px){
@@ -248,7 +264,10 @@ p{
      margin-left: 50px;
      text-align: center;
    }
-   
+   .containerLogin{
+    margin-top: 0;
+   }
+  
    }
  
 @media screen and (max-width: 1400px){
