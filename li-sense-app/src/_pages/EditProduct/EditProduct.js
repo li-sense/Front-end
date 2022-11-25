@@ -12,6 +12,7 @@ export default function EditProduct(props) {
   }
   function funcao2() {
     alert("Alterações Canceladas!");
+    navigate("/");
   }
   function readURL(input) {
     if (input.files && input.files[0]) {
@@ -47,7 +48,7 @@ export default function EditProduct(props) {
 
             <div className="new-infos-prod">
               <label className="infos-prod-l">Nome</label>
-              <input className="new-prod"></input>
+              <input className="new-prod" placeholder="Jhonata silva"></input>
               <label className="infos-prod-l">Preço</label>
               <input className="new-prod" placeholder="R$ 00,00"></input>
               <label className="infos-prod-l">Categoria</label>
@@ -84,9 +85,6 @@ export default function EditProduct(props) {
 
               <label>Outros</label>
               <input className="input-qt-est" type="text" placeholder="" />
-            </div>
-            <div className="d2">
-              {/* <BsBoxSeam size={100} className="icon-caixa" /> */}
             </div>
           </div>
 
