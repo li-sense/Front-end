@@ -40,19 +40,11 @@
       src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
     ></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"
-    />
+
     <meta name="importmap-type" content="systemjs-importmap" />
 
     <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
 
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"
-    />
-    <meta name="importmap-type" content="systemjs-importmap" />
 
     <script type="systemjs-importmap">
       {
@@ -73,7 +65,7 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@li-sense/root-config": "//process.env.URL:9000/li-sense-root-config.js",
+          "@li-sense/root-config": "//localhost:9000/li-sense-root-config.js",
           "@li-sense/li-sense-app": "//localhost:8080/li-sense-li-sense.js"
         }
       }
