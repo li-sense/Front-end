@@ -45,13 +45,13 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
-   # - name: Front-externo
-    #  uses: docker/build-push-action@v3
-     # with:
-      #  context: .
-       # file: ./Dockerfile
-        # push: true
-    #    tags: ${{ secrets.DOCKER_HUB_USERNAME }}/front.li-sense:development-externo
+    - name: Front-externo
+      uses: docker/build-push-action@v3
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/front.li-sense:development-externo
       
     - name: Front-interno
       uses: docker/build-push-action@v3
