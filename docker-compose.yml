@@ -2,12 +2,12 @@ version: '3'
 
 services:
 
-#  front-1:
- #   container_name: front-externo
-  ## ports:
-    #  - "9000:9000"
+  front-1:
+    container_name: front-externo
+    ports:
+      - "9000:9000"
 
-  front:
+  front-2:
     container_name: front-interno
     build:
       context: ./li-sense-app
