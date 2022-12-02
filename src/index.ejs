@@ -40,19 +40,11 @@
       src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
     ></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"
-    />
+
     <meta name="importmap-type" content="systemjs-importmap" />
 
     <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
 
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"
-    />
-    <meta name="importmap-type" content="systemjs-importmap" />
 
     <script type="systemjs-importmap">
       {
@@ -69,7 +61,7 @@
       as="script"
     />
 
-    <% if (isLocal) { %>
+   <% if (isLocal) { %>
     <script type="systemjs-importmap">
       {
         "imports": {
@@ -79,6 +71,7 @@
       }
     </script>
     <% } %>
+  
 
     <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
     <% if (isLocal) { %>
