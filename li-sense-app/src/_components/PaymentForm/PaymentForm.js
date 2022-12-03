@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./payment.css";
 import { useNavigate } from "react-router-dom";
 import { BsCreditCardFill, BsFillCreditCard2FrontFill } from "react-icons/bs";
+import { BiArrowBack } from "react-icons/bi";
 
 export default function PaymentForm() {
   const navigate = useNavigate();
@@ -20,6 +21,15 @@ export default function PaymentForm() {
   return (
     <>
       <div className="container-pay">
+        <i>
+          <BiArrowBack
+            size={25}
+            className="icon-seta"
+            onClick={() => {
+              navigate("/cart");
+            }}
+          />
+        </i>
         <div className="container-form-pay">
           {/* <h1> Adicionar nova forma de pagamento</h1> */}
           {/* <img className="img-cartao" src={Cartao} /> */}
@@ -83,34 +93,7 @@ export default function PaymentForm() {
                       </option>
                     );
                   })}
-                  {/* <option value="AC">Acre</option>
-                  <option value="AL">Alagoas</option>
-                  <option value="AP">Amapá</option>
-                  <option value="AM">Amazonas</option>
-                  <option value="BA">Bahia</option>
-                  <option value="CE">Ceará</option>
-                  <option value="DF">Distrito Federal</option>
-                  <option value="ES">Espírito Santo</option>
-                  <option value="GO">Goiás</option>
-                  <option value="MA">Maranhão</option>
-                  <option value="MT">Mato Grosso</option>
-                  <option value="MS">Mato Grosso do Sul</option>
-                  <option value="MG">Minas Gerais</option>
-                  <option value="PA">Pará</option>
-                  <option value="PB">Paraíba</option>
-                  <option value="PR">Paraná</option>
-                  <option value="PE">Pernambuco</option>
-                  <option value="PI">Piauí</option>
-                  <option value="RJ">Rio de Janeiro</option>
-                  <option value="RN">Rio Grande do Norte</option>
-                  <option value="RS">Rio Grande do Sul</option>
-                  <option value="RO">Rondônia</option>
-                  <option value="RR">Roraima</option>
-                  <option value="SC">Santa Catarina</option>
-                  <option value="SP">São Paulo</option>
-                  <option value="SE">Sergipe</option>
-                  <option value="TO">Tocantins</option>
-                  <option value="EX">Estrangeiro</option> */}
+                
                 </select>
               </div>
             </div>
@@ -127,11 +110,7 @@ export default function PaymentForm() {
                   })}
                 </select>
 
-                {/* <input
-                  type="city"
-                  className="form-control-dat-tel "
-                  placeholder="Cidade "
-                /> */}
+             
               </div>
               <div className="dat-cep">
                 <label className="span-input2 ml-5">Cep</label>

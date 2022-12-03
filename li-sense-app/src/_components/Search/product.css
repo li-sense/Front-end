@@ -1,0 +1,139 @@
+.product {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  padding: 10px 20px;
+
+  background: #fff;
+  border-radius: 5px 5px 4px 4px;
+  border: 1px solid transparent;
+
+  border-bottom: 3px solid #eee;
+  cursor: pointer;
+}
+.product:hover {
+  border: 1px solid #eee;
+  border-bottom: 3px solid #eee;
+}
+
+.product-body {
+  border-right: 2px solid #eee;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+.product-body h2 {
+  font-size: 16px;
+  font-family: var(--body-fonts);
+}
+.product-body h3 {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.product-body-stars {
+  display: flex;
+  align-items: center;
+  color: #f2c832;
+  font-size: 19px;
+}
+.product-body-stars span {
+  padding-left: 3px;
+  font-weight: 300;
+  color: rgb(153, 153, 153);
+  font-size: 14px;
+}
+
+.product-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding: 10px;
+}
+.product-cart h2 {
+  color: #ff6500;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--body-fonts);
+}
+.product-cart button {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px;
+  transition: 500ms;
+}
+.product-cart button:hover {
+  background: var(--color-tertiary);
+}
+
+@media (max-width: 992px) {
+  .product-body-stars {
+    font-size: 13px;
+  }
+  .product-body-stars span {
+    font-size: 13px;
+  }
+
+  .product-body h2 {
+    font-size: 15px;
+  }
+  .product-body h3 {
+    font-size: 11px;
+  }
+
+  .product-cart h2 {
+    font-size: 15px;
+  }
+  .product-cart button {
+    font-size: 13px;
+  }
+  .product-cart {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+  .product-body h2 {
+    font-size: 14px;
+  }
+  .product-cart h2 {
+    font-size: 14px;
+  }
+  .product-cart {
+    padding: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-body {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .product-cart {
+    display: contents;
+  }
+  .product-body h2 {
+    font-size: 15px;
+  }
+  .product-cart h2 {
+    font-size: 17px;
+  }
+  .product-cart button {
+    margin-left: 40px;
+  }
+}

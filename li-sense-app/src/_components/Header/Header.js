@@ -51,7 +51,9 @@ export default function Header() {
             <div className="search-box">
               <input type="search" placeholder="Faça sua busca" />
               <button type="submit">
-                <i>
+                <i onClick={() => {
+                  navigate('/search')
+                }}>
                   <FaSearch />
                 </i>
               </button>

@@ -38,6 +38,9 @@
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
     "cidades-estados-brasil-json": "^1.0.3",
+    "gapi-script": "^1.2.0",
+    "react-file-reader": "^1.1.4",
+    "react-google-login": "^5.2.2",
     "single-spa": "^5.9.3"
   }
 }
