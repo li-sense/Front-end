@@ -1,21 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+var querystring = require("querystring");
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import Logocentral from "../../_assets/img/logoredonda.png";
 import LisenseContext from "../../_context/LisenseContext";
 import { FaLock } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import { HiOutlineMail } from "react-icons/hi";
-import userLogin from "../../_service/userLogin";
 import { GoogleLogin } from "react-google-login";
 import { gapi } from "gapi-script";
 import { clientId } from "../../_auth/LoginGoogle";
-
+import axios from "axios";
 export default function Login() {
   const navigate = useNavigate();
   const [userData, setUserData] = React.useState({ email: "", password: "" });
-  const { setUser } = React.useContext(LisenseContext);
-
+  const { setUser, user } = React.useContext(LisenseContext);
+  const [isErr, setIsErr] = useState(false);
   useEffect(() => {
     function start() {
       gapi.client.init({
@@ -37,6 +36,38 @@ export default function Login() {
   const onFailure = (res) => {
     console.log("LOGIN FAIL", res);
   };
+
+  const userLogin = async () => {
+    axios
+      .post(
+        "https://dev.li-sense.xyz/api/v1/usuarios/login",
+        querystring.stringify({
+          username: userData.email, //gave the values directly for testing
+          password: userData.password,
+        }),
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      )
+      .then(function (response) {
+        localStorage.setItem("token", response.data.access_token);
+        axios.get("https://dev.li-sense.xyz/api/v1/usuarios/").then((res) => {
+          res.data.map((email) => {
+            if (email.email == userData.email) {
+              setUser(email);
+              navigate('/')
+            }
+          });
+
+          //navigate("/");
+        });
+      })
+      .catch((_err) => {
+        setIsErr(true);
+      });
+  };
   return (
     <div className="container-geral">
       <div className="containerTexto">
@@ -50,7 +81,7 @@ export default function Login() {
       <div className="telalogin">
         <div className="containerLogin">
           <h1>Login</h1>
-          <form>
+          <div>
             <div className="mb-login">
               <span className="span-input">E-mail</span>
               <div className="container-input">
@@ -93,17 +124,17 @@ export default function Login() {
             >
               Esqueceu a senha?
             </p>
+            <p>{isErr && "Usuario ou senha incorreto."}</p>
             <button
-              type="submit"
               className="btn"
               onClick={() => {
-                userLogin(userData, setUser);
+                userLogin();
               }}
             >
               {" "}
               Entrar
             </button>
-          </form>
+          </div>
           <p className="cadastrar">
             <a
               onClick={() => {

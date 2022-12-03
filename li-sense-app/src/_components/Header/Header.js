@@ -71,7 +71,7 @@ export default function Header() {
                 <i>
                   <FaUser />
                 </i>
-                {!user && (
+                {!user.nome && (
                   <>
                     <span>
                       Olá, faça seu login <br />
@@ -81,7 +81,7 @@ export default function Header() {
                 )}
               </a>
               <div className={`dropdown-user ${open ? 'active' : 'inactive'} `}>
-                {!user ? (
+                {!user.nome ? (
                   <>
                     <DropDownRegister />
                   </>
@@ -105,7 +105,7 @@ export default function Header() {
             </div>
           </nav>
         </div>
-        <Menu />
+    
       </header>
     </>
   )

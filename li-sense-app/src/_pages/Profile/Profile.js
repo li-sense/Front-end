@@ -4,13 +4,13 @@ import Logocentral from "../../_assets/img/logoredonda.png";
 import LisenseContext from '../../_context/LisenseContext';
 import { useNavigate } from 'react-router-dom';
 export default function Profile(props){
-  const [nome, setNome] = useState(props.nome);
-  const [senha, setSenha] = useState(props.senha);
-  const [email, setEmail] = useState(props.email);
-  const [cpf, setCpf] = useState(props.cpf);
-  const [telefone, setTelefone] = useState(props.telefone);
-  const { user } = React.useContext(LisenseContext);
 
+  const { user } = React.useContext(LisenseContext);
+  const navigate = useNavigate()
+  React.useEffect(() => {
+    !user.nome && navigate('/')
+  })
+console.log(user,'dale')
   return (
     <div className="w-screen">
       <div className='flex-row max-w-4xl mx-auto py-6'>
@@ -29,7 +29,7 @@ export default function Profile(props){
                 <input
                   name='username'
                   className='form-control'
-                  placeholder={user.profileObj ? user.profileObj.name : ''}
+                  placeholder={user.nome ? user.nome : ''}
                 />
                 <div className='px-6 text-sm text-justify'>
                   Esse é nome como você deverá ser mencionado nas compras ou registros.
@@ -44,7 +44,7 @@ export default function Profile(props){
                 <input
                   name='email'
                   className='form-control'
-                  placeholder={user.profileObj ? user.profileObj.email : ''}
+                  placeholder={user.email ? user.email : ''}
                 />
                 <div className='px-6 text-sm text-justify'>
                   Você pode adicionar novos emails para facilitar a verificação.
@@ -111,7 +111,7 @@ export default function Profile(props){
               <input
                 name='username'
                 className='form-control'
-                placeholder={user.profileObj ? user.profileObj.name : ''}
+                placeholder={user.nome ? user.nome : ''}
               />
             </div>
             <div className='col-span-3'>
