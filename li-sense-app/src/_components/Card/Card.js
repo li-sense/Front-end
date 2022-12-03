@@ -13,6 +13,7 @@ export default function Card(props) {
     setCurrentProduct(product)
     navigate(`/product/${product.name}`)
   }
+
   return (
     <>
       <div
@@ -30,12 +31,12 @@ export default function Card(props) {
             <FaRegBookmark className={'productCard__wishlist'} />
           </div>
         </div>
-        <img src={data.url} className="productImage" alt="product-img" />
+        <img src='https://i.pinimg.com/236x/65/f7/76/65f776ea5db956ccd49de5242c81eb38.jpg' className="productImage" alt="product-img" />
 
-        <h3 className="productName">{data.name}</h3>
+        <h3 className="productName">{data.nome}</h3>
 
-        <p className="productDesc">{data.description}</p>
-        <p className="productPrice">{data.price}</p>
+        <p className="productDesc">{data.descricao}</p>
+        <p className="productPrice">{data.preco}</p>
       </div>
     </>
   )
