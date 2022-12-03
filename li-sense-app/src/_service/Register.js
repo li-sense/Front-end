@@ -22,7 +22,7 @@ const register = async (params, state) => {
     credentials: 'same-origin',
     params: test
   }).then(response => {
-    console.log(response)
+  
   })
 }
 
