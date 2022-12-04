@@ -15,12 +15,12 @@ export default function ProductDetails() {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 500;
   };
+  const data1 = [];
 
   const slideRight = () => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 500;
   };
-
   return (
     <>
       <div className="container-product">
@@ -63,23 +63,42 @@ export default function ProductDetails() {
       <hr class="solid"></hr>
 
       <h1 className="title-desc" id="also-see">Veja também:</h1>
-
+      {/* COMEÇO AQUI */}
       <div className="relative flex items-center">
         <MdChevronLeft
           className="opacity-50 cursor-pointer hover:opacity-100"
           onClick={slideLeft}
           size={40}
         />
+
+
         <div
           id="slider"
-          className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="w-full h-full overflow-x-hidden scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
-          {data.slice(0, 8).map((_value, key) => (
-            <div className=" d inline-block p-2 cursor-pointer overflow-y-auto">
+
+          {/* {data.slice(0, 8).map((_value, key) => (
+            <div className=" card-slider inline-block p-2 cursor-pointer overflow-y-auto">
               <Components.Card className="d" data={_value} key={key} />
             </div>
           ))}
+           */}
+          {/* {data1} = {data.map(function(_value){
+            if (currentProduct.type == _value.type){
+              return _value
+            }
+          })} */}
+
+          {data.map((_value, key) => (
+            <div className=" card-slider inline-block p-2 cursor-pointer overflow-y-auto">
+              <Components.Card className="d" data={_value} key={key} />
+            </div>
+          ))}
+
         </div>
+
+
+
         <MdChevronRight
           className="opacity-50 cursor-pointer hover:opacity-100"
           onClick={slideRight}
