@@ -156,104 +156,21 @@ hr.solid {
   font-size: 40px;
   opacity: 0.5;
 }
-/* 
-@media (max-width: 384px)  {
-  .container-info-box {
-    margin: auto;
-    font-size: 10px;
-    display: block;
-  }
-}
 
 @media (max-width: 484px) {
   .card-slider {
-    width: 90vw;
-  }
-  .d {
-    width: 1%;
-    background-color: yellow;
+    width: 60vw;
   }
   .productCard {
-  background: var(pink);
-  max-width: 17rem;
-  border-radius: 5px;
-
-  min-height: 25rem;
+  width: 17rem;
+  height: 25rem;
+  }
 }
+
 
 @media (max-width: 700px) {
   .container-image-product {
-    padding: none;
-  }
-  .container-product-details {
-    margin: 12px auto;
-    width: 90vw;
-  }
-}
-
-@media (max-width: 900px) {
-  .container-product {
-    display:block;
-    height: fit-content;
-  }
-  .container-product-details {
-    margin: 12px auto;
-    width: 80vw;
-  }
-}
-
-@media (max-width: 1040px) {
-  .field-info {
-    height: auto;
-    background-color: aquamarine;
-  }
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 384px)  {
-  .container-info-box {
-    margin: auto;
-    font-size: 10px;
-    display: block;
-  }
-}
-@media (max-width: 484px) {
-  .card-slider {
-  }
-  .d {
-    width: 1px;
-    background-color: yellow;
-    height: fit-content;
-
-  }
-  .ux {
-    height: fit-content;
-    width: auto;
-  }
-  .productCard {
-  background: var(pink);
-  max-width: 17rem;
-  border-radius: 5px;
-
-  min-height: 25rem;
-}
-}
-
-@media (max-width: 700px) {
-  .container-image-product {
-    padding: none;
+    padding: 0px 0px;
   }
   .container-product-details {
     margin: 12px auto;
@@ -262,6 +179,10 @@ hr.solid {
 }
 
 @media (max-width: 1017px) {
+  .container-image-product{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .container-product {
     display:block;
     height: fit-content;
@@ -270,20 +191,25 @@ hr.solid {
     margin: 12px auto;
     width: 80vw;
   }
+  .buy-button {
+  height: 60px;
+  width: 180px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 1039px) {
-  .field-info {
-    height: auto;
-  }
   #type {
-    display: inline;
-    margin-top: 0px;
+    margin-top: 0px; 
   }
   .container-sale-box {
     margin-top: 0px;
-    background-color: aquamarine;
     padding-top: 10px;
+  }
+    .buy-button {
+    margin-top: 15px;
+    width: 180px;
   }
 }
 

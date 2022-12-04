@@ -26,8 +26,12 @@ export default function Card(props) {
             <VscFile className={'productCard__typeIcon'} />
           </div>
           <div>
-            <FaShoppingCart className={'productCard__cart'} />
-            <FaRegBookmark className={'productCard__wishlist'} />
+            <button>
+              <FaShoppingCart className={'productCard__cart'} />
+            </button>
+            <button>
+              <FaRegBookmark className={'productCard__wishlist'} />
+            </button>
           </div>
         </div>
         <img src={data.url} className="productImage" alt="product-img" />

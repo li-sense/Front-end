@@ -15,8 +15,6 @@ export default function ProductDetails() {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 250;
   };
-  const data1 = [];
-
   const slideRight = () => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 250;
@@ -30,7 +28,9 @@ export default function ProductDetails() {
 
         <div className="container-product-details">
           <div className="container-wishlist-icon">
-            <FaRegBookmark className={"productCard__wishlist"} />
+            <button>
+              <FaRegBookmark className={"productCard__wishlist"} />
+            </button>
           </div>
 
           <div className="h1-title-p">
@@ -75,10 +75,7 @@ export default function ProductDetails() {
         >
           {data.slice(0, 8).map((_value, key) => (
             <div className=" card-slider inline-block p-2 cursor-pointer overflow-y-auto">
-              <div className="ux">
-
-                <Components.Card className="d" data={_value} key={key} />
-              </div>
+                <Components.Card data={_value} key={key} />
             </div>
           ))}
         </div>
