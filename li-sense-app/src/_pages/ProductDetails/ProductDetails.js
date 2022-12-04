@@ -13,13 +13,13 @@ export default function ProductDetails() {
   console.log(currentProduct);
   const slideLeft = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 500;
+    slider.scrollLeft = slider.scrollLeft - 250;
   };
   const data1 = [];
 
   const slideRight = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 500;
+    slider.scrollLeft = slider.scrollLeft + 250;
   };
   return (
     <>
@@ -39,7 +39,7 @@ export default function ProductDetails() {
           <hr class="solid"></hr>
           <div className="container-info-box">
             <p class="field-info">Id do produto: {currentProduct.id}</p>
-            <p class="field-info">
+            <p id="type" class="field-info">
               Tipo de licença: {currentProduct.sale_type}
             </p>
             <p class="field-info">Vendido por: {currentProduct.vendor}</p>
@@ -63,42 +63,25 @@ export default function ProductDetails() {
       <hr class="solid"></hr>
 
       <h1 className="title-desc" id="also-see">Veja também:</h1>
-      {/* COMEÇO AQUI */}
       <div className="relative flex items-center">
         <MdChevronLeft
           className="opacity-50 cursor-pointer hover:opacity-100"
           onClick={slideLeft}
           size={40}
         />
-
-
         <div
           id="slider"
           className="w-full h-full overflow-x-hidden scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
-
-          {/* {data.slice(0, 8).map((_value, key) => (
+          {data.slice(0, 8).map((_value, key) => (
             <div className=" card-slider inline-block p-2 cursor-pointer overflow-y-auto">
-              <Components.Card className="d" data={_value} key={key} />
+              <div className="ux">
+
+                <Components.Card className="d" data={_value} key={key} />
+              </div>
             </div>
           ))}
-           */}
-          {/* {data1} = {data.map(function(_value){
-            if (currentProduct.type == _value.type){
-              return _value
-            }
-          })} */}
-
-          {data.map((_value, key) => (
-            <div className=" card-slider inline-block p-2 cursor-pointer overflow-y-auto">
-              <Components.Card className="d" data={_value} key={key} />
-            </div>
-          ))}
-
         </div>
-
-
-
         <MdChevronRight
           className="opacity-50 cursor-pointer hover:opacity-100"
           onClick={slideRight}
