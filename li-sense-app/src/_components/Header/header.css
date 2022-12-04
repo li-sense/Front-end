@@ -133,8 +133,11 @@ nav span {
   margin: 0 10px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
-
+.cart:hover{
+  color: #eee;
+}
 .cart i {
   font-size: 25px;
   padding: 5px;

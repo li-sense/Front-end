@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .container-product{
   width: 100%;
@@ -17,6 +14,10 @@
 .container-image-prod {
   width: 70vw;
   height: 10px;
+}
+.productCard__wishlist{
+  font-size: 20px;
+  cursor: pointer;
 }
 .img-details {
   max-width: 100%;
@@ -71,7 +72,7 @@ h1{
   font-size: 12px;
   padding-left: 10%;
 }
-span {
+.sp1 {
   font-weight: bold;
   color: rgb(75, 70, 70);
   margin-bottom: 5px;
