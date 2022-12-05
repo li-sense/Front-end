@@ -7,10 +7,10 @@ export default function Checkout() {
   return (
     <>
       <div className="page-checkout">
-        <div class="container-cart">
+        <div className="container-cart">
           <h1>Carrinho de compras</h1>
-          <div class="container-detail">
-            <div class="list-titles">
+          <div className="container-detail">
+            <div className="list-titles">
               <div>Produto</div>
               <div>Preço</div>
             </div>
@@ -20,7 +20,7 @@ export default function Checkout() {
             <Cart />
           </div>
         </div>
-        <div class="container-check">
+        <div className="container-check">
           <CheckoutComponent />
         </div>
       </div>

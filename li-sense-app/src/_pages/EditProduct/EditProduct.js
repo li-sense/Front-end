@@ -32,9 +32,9 @@ export default function EditProduct(props) {
         <div className="container-all-edit">
           <span className="tilte-prod">Editar Informações do Produto</span>
           <div className="container-imagem-produto">
-            <div class="input-wrapper-prod">
-              <label class="picture" for="picture-input" tabIndex="0">
-                <span class="picture-image">Escolher novas imagens</span>
+            <div className="input-wrapper-prod">
+              <label className="picture" for="picture-input" tabIndex="0">
+                <span className="picture-image">Escolher novas imagens</span>
               </label>
 
               <input
