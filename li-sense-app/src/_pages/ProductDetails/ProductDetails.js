@@ -1,14 +1,15 @@
 import React from "react";
 import LisenseContext from "../../_context/LisenseContext";
 import "./Product.css";
-import Arrow from "../../_assets/img/arrow.png";
 import { Components } from "../../_components/Components";
 import { data } from "../../FakeData";
 import { FaRegBookmark } from "react-icons/fa";
+import { AiFillEdit } from "react-icons/ai";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-
+import { useNavigate } from "react-router-dom";
 
 export default function ProductDetails() {
+  const navigate = useNavigate();
   const { currentProduct } = React.useContext(LisenseContext);
   console.log(currentProduct);
   const slideLeft = () => {
@@ -30,6 +31,12 @@ export default function ProductDetails() {
 
         <div className="container-product-details">
           <div className="container-wishlist-icon">
+            <AiFillEdit
+              className={"productCard__wishlist"}
+              onClick={() => {
+                navigate("/product/:id/edit");
+              }}
+            />
             <FaRegBookmark className={"productCard__wishlist"} />
           </div>
 
@@ -45,12 +52,17 @@ export default function ProductDetails() {
             <p className="field-info">Vendido por: {currentProduct.vendor}</p>
           </div>
           <div className="container-sale-box">
-            <span>
+            <span className="sp1">
               <p>Valor para compra em definitivo:</p>
             </span>
             <p className="sale-price">{currentProduct.preco}</p>
             <div></div>
-            <button className="buy-button">Adquirir Licença</button>
+            <button
+              className="buy-button"
+            
+            >
+              Adquirir Licença
+            </button>
           </div>
         </div>
       </div>
@@ -62,7 +74,9 @@ export default function ProductDetails() {
       </p>
       <hr className="solid"></hr>
 
-      <h1 className="title-desc" id="also-see">Veja também:</h1>
+      <h1 className="title-desc" id="also-see">
+        Veja também:
+      </h1>
 
       <div className="relative flex items-center">
         <MdChevronLeft

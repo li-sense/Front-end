@@ -19,26 +19,18 @@ export default function Profile(props) {
       identificado: sellerId,
       nome: sellerData,
     };
-    axios;
-
+    const auth = localStorage.getItem("token");
     axios
-      .post(
-        "https://dev.li-sense.xyz/api/v1/vendedor/",
-        
-          data,
-        
-        {
-          headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNjcwNzk4ODMyLCJpYXQiOjE2NzAxOTQwMzIsInN1YiI6IjEyIn0.ABgoH6bL3n_5Xo-B-9KcKXgq9zTFl3MLNXzOXsICZ50",
-          },
-        }
-      )
+      .post("https://dev.li-sense.xyz/api/v1/vendedor/", data, {
+        headers: {
+          Authorization: auth,
+        },
+      })
       .then(function (response) {
-       console.log(response)
+        console.log(response);
       })
       .catch((_err) => {
-      setIsErr(_err.response.data.detail)
+        setIsErr(_err.response.data.detail);
       });
   };
 
@@ -135,7 +127,7 @@ export default function Profile(props) {
                   <input
                     name="password"
                     type="password"
-                    className="form-control "
+                    className="form-control"
                     placeholder={
                       user.profileObj ? user.profileObj.password : ""
                     }
@@ -217,12 +209,7 @@ export default function Profile(props) {
               </div>
             </div>
           </div>
-          <div>
-            {
-              isErr &&
-              <p>{isErr}</p>
-            }
-          </div>
+          <div>{isErr && <p>{isErr}</p>}</div>
           <div className="flex justify-center py-4">
             <button className="submit" onClick={() => newSeller()}>
               Torne-se um Vendedor

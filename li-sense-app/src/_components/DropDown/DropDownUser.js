@@ -1,15 +1,13 @@
-import React from 'react'
-import './DropDownUser.css'
-import DropDownItens from './DropDownUserItens'
-import { useNavigate } from 'react-router-dom'
-import { FaUser } from 'react-icons/fa'
-import { MdOutlineLogout } from 'react-icons/md'
-import { AiFillSetting, AiFillDollarCircle } from 'react-icons/ai'
-
+import React from "react";
+import "./DropDownUser.css";
+import DropDownItens from "./DropDownUserItens";
+import { useNavigate } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
+import { MdOutlineLogout } from "react-icons/md";
+import { AiFillSetting, AiFillDollarCircle } from "react-icons/ai";
 
 export default function DropDownUser(props) {
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
 
   return (
     <>
@@ -17,36 +15,47 @@ export default function DropDownUser(props) {
         <h2>Sua conta</h2>
         <li
           onClick={() => {
-            navigate('/profile')
+            navigate("/profile");
           }}
         >
-          <DropDownItens icon={<FaUser />} text={'Meu perfil'} />
+          <DropDownItens icon={<FaUser />} text={"Meu perfil"} />
         </li>
         <li
           onClick={() => {
-            navigate('/profile/config')
+            navigate("/profile/config");
           }}
         >
-          <DropDownItens icon={<AiFillSetting />} text={'Configurações'} />
+          <DropDownItens icon={<AiFillSetting />} text={"Configurações"} />
         </li>
         <li
           onClick={() => {
-            navigate('/profile/beAseller')
+            navigate("/profile/beAseller");
           }}
         >
           <DropDownItens
             icon={<AiFillDollarCircle />}
-            text={'Torne-se um vendendor'}
+            text={"Torne-se um vendendor"}
           />
         </li>
         <li
           onClick={() => {
-            navigate('#')
+            navigate("/product/creatproduct");
           }}
         >
-          <DropDownItens  icon={<MdOutlineLogout />} text={'Sair da conta'} />
+          <DropDownItens
+            icon={<AiFillDollarCircle />}
+            text={"Criar produto"}
+          />
+        </li>
+        <li
+          onClick={() => {
+            navigate("#");
+          }}
+        >
+
+          <DropDownItens icon={<MdOutlineLogout />} text={"Sair da conta"} />
         </li>
       </ul>
     </>
-  )
+  );
 }
