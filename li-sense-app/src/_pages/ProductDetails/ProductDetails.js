@@ -57,18 +57,7 @@ export default function ProductDetails() {
             </span>
             <p className="sale-price">{currentProduct.preco}</p>
             <div></div>
-            <button
-
-              className="buy-button"
-
-              class="buy-button"
-              onClick={() => {
-                navigate("/product/creatproduct");
-              }}
-
-            >
-              Adquirir Licença
-            </button>
+            <button className="buy-button">Adquirir Licença</button>
           </div>
         </div>
       </div>
