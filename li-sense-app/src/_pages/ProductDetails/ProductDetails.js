@@ -26,7 +26,7 @@ export default function ProductDetails() {
     <>
       <div className="container-product">
         <div className="container-image-product">
-          <img className="img-details" src={currentProduct.url} />
+          <img className="img-details" src="https://i.pinimg.com/236x/4a/9d/4a/4a9d4a8e55fa6203fb0a6ed0b52f029c.jpg" alt="img"/>
         </div>
 
         <div className="container-product-details">
@@ -41,27 +41,31 @@ export default function ProductDetails() {
           </div>
 
           <div className="h1-title-p">
-            <h1>{currentProduct.name}</h1>
+            <h1>{currentProduct.nome}</h1>
           </div>
-          <hr class="solid"></hr>
+          <hr className="solid"></hr>
           <div className="container-info-box">
-            <p class="field-info">Id do produto: {currentProduct.id}</p>
-            <p class="field-info">
+            <p className="field-info">Id do produto: {currentProduct.id}</p>
+            <p className="field-info">
               Tipo de licença: {currentProduct.sale_type}
             </p>
-            <p class="field-info">Vendido por: {currentProduct.vendor}</p>
+            <p className="field-info">Vendido por: {currentProduct.vendor}</p>
           </div>
           <div className="container-sale-box">
             <span className="sp1">
               <p>Valor para compra em definitivo:</p>
             </span>
-            <p className="sale-price">{currentProduct.price}</p>
+            <p className="sale-price">{currentProduct.preco}</p>
             <div></div>
             <button
+
+              className="buy-button"
+
               class="buy-button"
               onClick={() => {
                 navigate("/product/creatproduct");
               }}
+
             >
               Adquirir Licença
             </button>
@@ -69,12 +73,12 @@ export default function ProductDetails() {
         </div>
       </div>
 
-      <hr class="solid"></hr>
+      <hr className="solid"></hr>
       <p className="details-product">
         <p className="title-desc">Descrição:</p>
-        {currentProduct.description}
+        {currentProduct.descricao}
       </p>
-      <hr class="solid"></hr>
+      <hr className="solid"></hr>
 
       <h1 className="title-desc" id="also-see">
         Veja também:

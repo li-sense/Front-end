@@ -52,7 +52,7 @@ export default function Login() {
         }
       )
       .then(function (response) {
-        localStorage.setItem("token", response.data.access_token);
+        localStorage.setItem("token", `Bearer ${response.data.access_token}`);
         axios.get("https://dev.li-sense.xyz/api/v1/usuarios/").then((res) => {
           res.data.map((email) => {
             if (email.email == userData.email) {

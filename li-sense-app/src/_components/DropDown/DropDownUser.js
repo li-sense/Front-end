@@ -39,9 +39,25 @@ export default function DropDownUser(props) {
         </li>
         <li
           onClick={() => {
+
+            navigate("/product/creatproduct");
+          }}
+        >
+          <DropDownItens
+            icon={<AiFillDollarCircle />}
+            text={"Criar produto"}
+          />
+        </li>
+        <li
+          onClick={() => {
             navigate("#");
           }}
         >
+
+            navigate("#");
+          }}
+        >
+
 
           <DropDownItens icon={<MdOutlineLogout />} text={"Sair da conta"} />
         </li>

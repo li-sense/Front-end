@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const api = axios.create({
-  baseUrl: 'http://localhost:8000/api/v1/'
+const apiUrl = axios.create({
+  baseUrl: 'https://dev.li-sense.xyz'
 });
 
-export default api;
+export default apiUrl;
