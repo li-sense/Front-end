@@ -1,6 +1,7 @@
 .productCard {
   background: var(--myLGray);
   max-width: 17rem;
+  width: 17rem;
   border-radius: 5px;
 
   min-height: 25rem;

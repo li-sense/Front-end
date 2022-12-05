@@ -6,6 +6,7 @@ import Logo from '../../_assets/img/logo.png'
 import DropDownRegister from '../DropDown/DropDownRegister'
 import DropDownUser from '../DropDown/DropDownUser'
 import { FaUser, FaCartPlus, FaSearch } from 'react-icons/fa'
+import Menu from '../Menu/Menu'
 
 export default function Header() {
   const navigate = useNavigate()
@@ -70,7 +71,7 @@ export default function Header() {
                 <i>
                   <FaUser />
                 </i>
-                {!user && (
+                {!user.nome && (
                   <>
                     <span>
                       Olá, faça seu login <br />
@@ -80,7 +81,7 @@ export default function Header() {
                 )}
               </a>
               <div className={`dropdown-user ${open ? 'active' : 'inactive'} `}>
-                {!user ? (
+                {!user.nome ? (
                   <>
                     <DropDownRegister />
                   </>
@@ -104,6 +105,7 @@ export default function Header() {
             </div>
           </nav>
         </div>
+    
       </header>
     </>
   )

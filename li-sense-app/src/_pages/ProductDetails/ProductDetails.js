@@ -1,14 +1,15 @@
 import React from "react";
 import LisenseContext from "../../_context/LisenseContext";
 import "./Product.css";
-import Arrow from "../../_assets/img/arrow.png";
 import { Components } from "../../_components/Components";
 import { data } from "../../FakeData";
 import { FaRegBookmark } from "react-icons/fa";
+import { AiFillEdit } from "react-icons/ai";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-
+import { useNavigate } from "react-router-dom";
 
 export default function ProductDetails() {
+  const navigate = useNavigate();
   const { currentProduct } = React.useContext(LisenseContext);
   console.log(currentProduct);
   const slideLeft = () => {
@@ -28,9 +29,13 @@ export default function ProductDetails() {
 
         <div className="container-product-details">
           <div className="container-wishlist-icon">
-            <button>
-              <FaRegBookmark className={"productCard__wishlist"} />
-            </button>
+            <AiFillEdit
+              className={"productCard__wishlist"}
+              onClick={() => {
+                navigate("/product/:id/edit");
+              }}
+            />
+            <FaRegBookmark className={"productCard__wishlist"} />
           </div>
 
           <div className="h1-title-p">
@@ -45,12 +50,19 @@ export default function ProductDetails() {
             <p class="field-info">Vendido por: {currentProduct.vendor}</p>
           </div>
           <div className="container-sale-box">
-            <span>
+            <span className="sp1">
               <p>Valor para compra em definitivo:</p>
             </span>
             <p className="sale-price">{currentProduct.price}</p>
             <div></div>
-            <button class="buy-button">Adquirir Licença</button>
+            <button
+              class="buy-button"
+              onClick={() => {
+                navigate("/product/creatproduct");
+              }}
+            >
+              Adquirir Licença
+            </button>
           </div>
         </div>
       </div>
@@ -62,7 +74,10 @@ export default function ProductDetails() {
       </p>
       <hr class="solid"></hr>
 
-      <h1 className="title-desc" id="also-see">Veja também:</h1>
+      <h1 className="title-desc" id="also-see">
+        Veja também:
+      </h1>
+
       <div className="relative flex items-center">
         <MdChevronLeft
           className="opacity-50 cursor-pointer hover:opacity-100"

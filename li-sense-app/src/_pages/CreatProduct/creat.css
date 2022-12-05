@@ -1,0 +1,136 @@
+.container-all-criar{
+    background-color: var( --color-background);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+   
+}
+.tilte-prod-c{
+    color: rgb(0, 0, 0);
+    font-family: var(--title-fonts);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container-imagem-produto-c{
+   
+    width:50%;
+    height:30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 7px;
+    background: #fff;
+    border-radius: 5px 5px 4px 4px;
+    border: 1px solid transparent;
+    border-bottom: 3px solid #eee;
+   
+
+}
+.container-imagem-produto-c input{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid #2d2d2d;
+    
+}
+
+.new-infos-prod-c{
+    
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.new-infos-prod-c input{
+    width: 100%;
+    padding: 8px;
+}
+.new-infos-prod-c label{
+    font-family: var(--body-fonts);
+    font-size: 14px;
+}
+.container-detalhes-c{
+    width:50%;
+    height:30%;
+    display: flex;
+    grid: 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+    justify-content: flex-end;
+    border-radius: 7px;
+    background: #fff;
+    border-radius: 5px 5px 4px 4px;
+    border: 1px solid transparent;
+  
+    border-bottom: 3px solid #eee;
+    cursor: pointer;
+}
+textarea::placeholder{
+    font-size: 13px;
+}
+
+.container-detalhes-c p{
+    font-family: var(--body-fonts);
+    font-weight: 500;
+}
+.detalhes-produto-c{
+  
+    width:400px;
+    height: 200px;
+    padding: 8px;
+    border: 1px solid #2d2d2d;
+    border-radius: 5px;
+    font-family: var(--body-fonts);
+}
+.title-det-c{
+    font-family: var(--title-fonts);
+}
+
+input[type='file'] {
+    display: none
+  }
+  
+  .input-wrapper label {
+    background-color:var(--color-primary);
+    border-radius: 5px;
+    color: #fff;
+    margin: 15px;
+    padding: 10px ;
+    width: 100%;
+    cursor: pointer;
+    
+  }
+  
+  .input-wrapper label:hover {
+    background-color: var(--color-tertiary);
+  }
+
+  @media screen and (max-width: 767px) {
+    .container-imagem-produto-c{
+        width: 100%;
+    }
+    .container-detalhes-c{
+        width: 100%;
+     }
+    }
+    @media screen and (max-width: 580px) {
+
+        .d1{
+            width: 100%;;
+        }
+        .container-detalhes-c{
+           width: 100%;
+        }
+        .container-imagem-produto-c{
+            width: 100%;
+        }
+    }
