@@ -1,5 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
 import axios from "axios";
+=======
+>>>>>>> 8fc8639e4d19c6e73b66aa3ad8a07c4238a1a33e
 import "./creat.css";
 import { useNavigate } from "react-router-dom";
 
