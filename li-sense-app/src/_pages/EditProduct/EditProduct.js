@@ -47,11 +47,11 @@ export default function EditProduct(props) {
             </div>
 
             <div className="new-infos-prod">
-              <label className="infos-prod-l">Nome</label>
-              <input className="new-prod" placeholder="Jhonata silva"></input>
+              <label className="infos-prod-l">Nome do Produto</label>
+              <input className="new-prod" placeholder="Pedro sampaio"></input>
               <label className="infos-prod-l">Preço</label>
               <input className="new-prod" placeholder="R$ 00,00"></input>
-              <label className="infos-prod-l">Categoria</label>
+              <label className="infos-prod-l">Classificação do Produto</label>
               <select className="op-cat" id="mySelect" onchange="myFunction()">
                 <option>Arte</option>
                 <option value="Livro">Livro</option>
