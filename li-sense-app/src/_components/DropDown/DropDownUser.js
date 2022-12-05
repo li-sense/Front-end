@@ -39,6 +39,7 @@ export default function DropDownUser(props) {
         </li>
         <li
           onClick={() => {
+
             navigate("/product/creatproduct");
           }}
         >
@@ -52,6 +53,11 @@ export default function DropDownUser(props) {
             navigate("#");
           }}
         >
+
+            navigate("#");
+          }}
+        >
+
 
           <DropDownItens icon={<MdOutlineLogout />} text={"Sair da conta"} />
         </li>
