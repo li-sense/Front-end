@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
 }
 
-.config {
+/* .config {
     background: rgb(255, 255, 255);
     background: radial-gradient(
     circle,
@@ -11,6 +11,14 @@ body {
     rgb(211, 155, 254) 84%,
     rgb(232, 226, 248) 100%
     );
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+} */
+
+.config {
+    background-color: var(--color-background-form);
     width: 100vw;
     height: 100vh;
     display: grid;
