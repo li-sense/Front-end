@@ -6,33 +6,12 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 export default function Profile(props) {
   const { user } = React.useContext(LisenseContext);
-  const [sellerData, setSellerDataName] = React.useState("");
-  const [isErr, setIsErr] = React.useState("");
-  const [sellerId, setSellerDataId] = React.useState("");
+
   const navigate = useNavigate();
   React.useEffect(() => {
     !user.nome && navigate("/");
   });
 
-  const newSeller = async () => {
-    let data = {
-      identificado: sellerId,
-      nome: sellerData,
-    };
-    const auth = localStorage.getItem("token");
-    axios
-      .post("https://dev.li-sense.xyz/api/v1/vendedor/", data, {
-        headers: {
-          Authorization: auth,
-        },
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch((_err) => {
-        setIsErr(_err.response.data.detail);
-      });
-  };
 
   return (
     <div className="w-screen">
@@ -187,13 +166,11 @@ export default function Profile(props) {
                   type="password"
                   className="form-control "
                   placeholder={"Torne-se um Vendedor"}
-                  onChange={(event) => {
-                    setSellerDataName(event.target.value);
-                  }}
+                
                 />
               </div>
             </div>
-            <div className="">
+            <div className="mb-8">
               <label forhtml="cnpj" className="mb-3 text-base font-medium">
                 CNPJ
               </label>
@@ -202,19 +179,13 @@ export default function Profile(props) {
                   name="cnpj"
                   className="form-control"
                   placeholder={"Torne-se um Vendedor"}
-                  onChange={(event) => {
-                    setSellerDataId(event.target.value);
-                  }}
+                
                 />
               </div>
             </div>
           </div>
-          <div>{isErr && <p>{isErr}</p>}</div>
-          <div className="flex justify-center py-4">
-            <button className="submit" onClick={() => newSeller()}>
-              Torne-se um Vendedor
-            </button>
-          </div>
+         
+         
         </div>
       </div>
     </div>

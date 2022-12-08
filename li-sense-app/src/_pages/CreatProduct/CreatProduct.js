@@ -1,19 +1,17 @@
 import React from "react";
-<<<<<<< HEAD
 import axios from "axios";
-=======
->>>>>>> 8fc8639e4d19c6e73b66aa3ad8a07c4238a1a33e
 import "./creat.css";
 import { useNavigate } from "react-router-dom";
 
 export default function CreatProtduct(props) {
   const { product } = props;
-  const [name, setName] = React.useState('');
-  const [descricao, setDescricao] = React.useState('');
-  const [preco, setPreco] = React.useState('');
-  const [detalhes, setDetalhes] = React.useState('');
+  const [name, setName] = React.useState("");
+  const [descricao, setDescricao] = React.useState("");
+  const [isErr, setIsErr] = React.useState("");
+  const [preco, setPreco] = React.useState("");
+  const [detalhes, setDetalhes] = React.useState("");
   const navigate = useNavigate();
- // console.log(product);
+  // console.log(product);
 
   function funcao1() {
     alert("Produto Adicionado");
@@ -42,25 +40,21 @@ export default function CreatProtduct(props) {
       preco: preco,
       detalhes: detalhes,
     };
-    const auth  = localStorage.getItem('token')
+    const auth = localStorage.getItem("token");
     axios
-      .post(
-        "https://dev.li-sense.xyz/api/v1/produtos/registra-produto",
-          data,
-        {
-          headers: {
-            Authorization:auth,
-          },
-        }
-      )
+      .post("https://dev.li-sense.xyz/api/v1/produtos/registra-produto", data, {
+        headers: {
+          Authorization: auth,
+        },
+      })
       .then(function (response) {
-       if(response.status) {
-        alert(`Produto ${response.data.nome} Criado com sucesso` )
-        navigate('/')
-       }
+        if (response.status) {
+          alert(`Produto ${response.data.nome} Criado com sucesso`);
+          navigate("/");
+        }
       })
       .catch((_err) => {
-      setIsErr(_err.response.data.detail)
+        setIsErr(_err.response.data.detail);
       });
   };
 
@@ -72,11 +66,37 @@ export default function CreatProtduct(props) {
           <div className="container-imagem-produto-c">
             <div className="new-infos-prod-c">
               <label className="infos-new-prod">Nome do Produto</label>
-              <input className="new-prod-c" placeholder="" onChange={(event) => {setName(event.target.value)}}></input>
+              <input
+                className="new-prod-c"
+                placeholder=""
+                onChange={(event) => {
+                  setName(event.target.value);
+                }}
+              ></input>
               <label className="infos-new-prod">Descrição</label>
-              <input className="new-prod-c" placeholder="R$ 00,00" onChange={(event) => {setDescricao(event.target.value)}}></input>
+              <input
+                className="new-prod-c"
+                placeholder="R$ 00,00"
+                onChange={(event) => {
+                  setDescricao(event.target.value);
+                }}
+              ></input>
+              <label className="infos-new-prod">Detalhes</label>
+              <input
+                className="new-prod-c"
+                placeholder="R$ 00,00"
+                onChange={(event) => {
+                  setDetalhes(event.target.value);
+                }}
+              ></input>
               <label className="infos-new-prod">Preço</label>
-              <input className="new-prod-c" placeholder="R$ 00,00" onChange={(event) => {setPreco(event.target.value)}}></input>
+              <input
+                className="new-prod-c"
+                placeholder="R$ 00,00"
+                onChange={(event) => {
+                  setPreco(event.target.value);
+                }}
+              ></input>
               <label className="infos-new-prod">Classificação do Produto</label>
               <select className="op-cat" id="mySelect" onchange="myFunction()">
                 <option>Arte</option>
@@ -102,6 +122,7 @@ export default function CreatProtduct(props) {
             />
           </div>
           <div className="botoes">
+            <p>{isErr ? "Esse produto ja existe" : ""}</p>
             <button className="btn-salvar" onClick={() => createProduct()}>
               Criar Produto
             </button>
