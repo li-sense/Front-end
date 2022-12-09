@@ -3,7 +3,9 @@ import LisenseContext from "./LisenseContext";
 
 export const LisenseProvider = ({ children }) => {
   const [currentProduct, setCurrentProduct] = useState([]);
-  const [user, setUser] = useState([])
+  const [user, setUser] = useState([]);
+  const [isSeller, setSeller] = useState(false);
+  const [company, setCompany] = useState(false)
   const cart = []
 
   const addItemInCart = (item) => {
@@ -13,6 +15,6 @@ export const LisenseProvider = ({ children }) => {
 
   }
   return (
-    <LisenseContext.Provider value={{currentProduct, setCurrentProduct, setUser, user, addItemInCart, cart}}>{children}</LisenseContext.Provider>
+    <LisenseContext.Provider value={{currentProduct, setCurrentProduct, setUser, user, addItemInCart, cart, isSeller, setSeller, company, setCompany}}>{children}</LisenseContext.Provider>
   );
 }

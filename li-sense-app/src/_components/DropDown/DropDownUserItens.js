@@ -18,14 +18,7 @@ function DropDownUserItens(props) {
       
       <i>{props.icon}</i>
       <span>{props.text}</span>
-      {
-        props.text =='Sair da conta' &&
-        <GoogleLogout
-      clientId={clientId}
-      buttonText={'Logout'}
-      onLogoutSuccess={onSuccess}
-      />
-      }
+    
     </div>
   )
 }

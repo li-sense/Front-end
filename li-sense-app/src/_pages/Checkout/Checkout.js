@@ -23,7 +23,7 @@ export default function Checkout() {
               <p>Preço</p>
             </div>
             {cart.length > 0 ? (
-              cart.map(value => <Cart items={value} />)
+              cart.map(value => <Cart items={value} key={value}/>)
             ) : (
               <div>
                 <h1>Seu carrinho esta vazio, Continue comprando</h1>
