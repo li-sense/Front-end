@@ -59,7 +59,7 @@
   padding: 20px;
   border-radius: 5px;
 
-  height: 385px;
+  max-height: 385px;
   overflow-y: auto;
 }
 .list-titles {
