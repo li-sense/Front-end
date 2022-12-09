@@ -4,7 +4,7 @@ import "./creat.css";
 import { useNavigate } from "react-router-dom";
 
 export default function CreatProtduct(props) {
-  const { product } = props;
+
   const [name, setName] = React.useState("");
   const [descricao, setDescricao] = React.useState("");
   const [isErr, setIsErr] = React.useState("");
@@ -12,27 +12,6 @@ export default function CreatProtduct(props) {
   const [detalhes, setDetalhes] = React.useState("");
   const [categoria, setCategoria] = React.useState("");
   const navigate = useNavigate();
-  // console.log(product);
-
-  function funcao1() {
-    alert("Produto Adicionado");
-    this.reset();
-  }
-  function funcao2() {
-    alert("Alterações Canceladas!");
-    navigate("/product/creatproduct");
-  }
-  function readURL(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-
-      reader.onload = function (e) {
-        $("#blah").attr("src", e.target.result);
-      };
-
-      reader.readAsDataURL(input.files[0]);
-    }
-  }
 
   const createProduct = async () => {
     let data = {
@@ -100,7 +79,7 @@ export default function CreatProtduct(props) {
                 }}
               ></input>
               <label className="infos-new-prod">Classificação do Produto</label>
-              <select className="op-cat" id="mySelect" onChange="setCategoria(event.target.value)">
+              <select className="op-cat" id="mySelect" onChange={setCategoria(event.target.value)}>
                 <option>Arte</option>
                 <option value="Livro">Livro</option>
                 <option value="Música">Música</option>
@@ -128,7 +107,7 @@ export default function CreatProtduct(props) {
             <button className="btn-salvar" onClick={() => createProduct()}>
               Criar Produto
             </button>
-            <button className="btn-cancelar" onClick={funcao2}>
+            <button className="btn-cancelar" >
               Cancelar
             </button>
           </div>

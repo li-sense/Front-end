@@ -8,8 +8,13 @@ import { AiFillSetting, AiFillDollarCircle } from "react-icons/ai";
 import LisenseContext from "../../_context/LisenseContext";
 
 export default function DropDownUser(props) {
-  const { isSeller } = React.useContext(LisenseContext)
+  const { isSeller, setUser } = React.useContext(LisenseContext)
   const navigate = useNavigate();
+const logout = () => {
+  setUser([])
+  localStorage.removeItem('userId')
+  localStorage.removeItem('token')
+}
 
   return (
     <>
@@ -58,7 +63,7 @@ export default function DropDownUser(props) {
       
         <li
           onClick={() => {
-            navigate("#");
+            logout()
           }}
         >
 

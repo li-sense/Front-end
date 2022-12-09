@@ -148,18 +148,7 @@ export default function Login() {
           <p className="entarg">
             <a>Ou</a>
           </p>
-          <button type="submit" className="btn1G">
-            <div className="content-btn1">
-              <GoogleLogin
-                clientId={clientId}
-                buttonText="Login"
-                onSuccess={onSuccess}
-                onFailure={onFailure}
-                cookiePolicy={"single_host_origin"}
-                isSignedIn={true}
-              />
-            </div>
-          </button>
+          
         </div>
       </div>
     </div>
