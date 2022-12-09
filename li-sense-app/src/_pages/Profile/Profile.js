@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./Profile.css";
-import Logocentral from "../../_assets/img/logoredonda.png";
 import LisenseContext from "../../_context/LisenseContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 export default function Profile(props) {
-  const { user } = React.useContext(LisenseContext);
+  const { user, company } = React.useContext(LisenseContext);
 
   const navigate = useNavigate();
   React.useEffect(() => {
     !user.nome && navigate("/");
+console.log(company)
   });
 
-
+  
   return (
     <div className="w-screen">
       <div className="flex-row max-w-4xl mx-auto py-6">
@@ -72,7 +72,7 @@ export default function Profile(props) {
                   </span>
                 </label>
                 <input
-                  onchange="readURL(this);"
+                  onChange="readURL(this);"
                   type="file"
                   name="profile-picture-input"
                   id="profile-picture-input"
@@ -151,7 +151,9 @@ export default function Profile(props) {
             </div> */}
           </div>
         </div>
-        <div className="panel-detail my-4">
+        {
+          company &&
+          <div className="panel-detail my-4">
           <div className="text-xl font-extrabold pt-3 px-5">
             <h1>Informações da Empresa</h1>
           </div>
@@ -165,8 +167,7 @@ export default function Profile(props) {
                   name="password"
                   type="password"
                   className="form-control "
-                  placeholder={"Torne-se um Vendedor"}
-                
+                  placeholder={company.nome}
                 />
               </div>
             </div>
@@ -178,15 +179,14 @@ export default function Profile(props) {
                 <input
                   name="cnpj"
                   className="form-control"
-                  placeholder={"Torne-se um Vendedor"}
-                
+                  placeholder={company.identificado}
                 />
               </div>
             </div>
           </div>
-         
-         
         </div>
+        }
+       
       </div>
     </div>
   );

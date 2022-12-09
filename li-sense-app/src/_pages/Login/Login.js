@@ -56,6 +56,7 @@ export default function Login() {
         axios.get("https://dev.li-sense.xyz/api/v1/usuarios/").then((res) => {
           res.data.map((email) => {
             if (email.email == userData.email) {
+              localStorage.setItem('userId', email.id)
               setUser(email);
               navigate('/')
             }

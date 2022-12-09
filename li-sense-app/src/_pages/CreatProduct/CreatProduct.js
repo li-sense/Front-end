@@ -10,6 +10,7 @@ export default function CreatProtduct(props) {
   const [isErr, setIsErr] = React.useState("");
   const [preco, setPreco] = React.useState("");
   const [detalhes, setDetalhes] = React.useState("");
+  const [categoria, setCategoria] = React.useState("");
   const navigate = useNavigate();
   // console.log(product);
 
@@ -39,6 +40,7 @@ export default function CreatProtduct(props) {
       descricao: descricao,
       preco: preco,
       detalhes: detalhes,
+      categoria: categoria
     };
     const auth = localStorage.getItem("token");
     axios
@@ -98,7 +100,7 @@ export default function CreatProtduct(props) {
                 }}
               ></input>
               <label className="infos-new-prod">Classificação do Produto</label>
-              <select className="op-cat" id="mySelect" onchange="myFunction()">
+              <select className="op-cat" id="mySelect" onChange="setCategoria(event.target.value)">
                 <option>Arte</option>
                 <option value="Livro">Livro</option>
                 <option value="Música">Música</option>
