@@ -158,43 +158,6 @@ hr.solid {
   opacity: 0.5;
 }
 
-/* @media (max-width: 384px)  {
-  .container-info-box {
-    margin: auto;
-    font-size: 10px;
-    display: block;
-  }
-}
-
-@media (max-width: 700px) {
-  .container-image-product {
-    padding: none;
-  }
-  .container-product-details {
-    margin: 12px auto;
-    width: 90vw;
-  }
-}
-
-@media (max-width: 900px) {
-  .container-product {
-    display:block;
-    height: fit-content;
-  }
-  .container-product-details {
-    margin: 12px auto;
-    width: 80vw;
-  }
-}
-
-@media (max-width: 1140px) {
-  .field-info {
-    height: auto;
-  }
-}
-
-jjjjjjjjjjjjjjjjjjjjjjj */
-
 @media (max-width: 484px) {
   .card-slider {
     width: 60vw;
@@ -238,9 +201,6 @@ jjjjjjjjjjjjjjjjjjjjjjj */
 }
 
 @media (max-width: 1039px) {
-  /* #type {
-    margin-top: 0px; 
-  } */
   .container-sale-box {
     margin-top: 0px;
     padding-top: 10px;
