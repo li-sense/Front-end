@@ -51,6 +51,11 @@
   max-width: 100%;
 }
 
+input:disabled {
+  border: 2px solid var(--color-primary);
+  background-color: var(--text-color);
+}
+
 .submit {
   font-family: var(--title-fonts);
   box-shadow: 5%;

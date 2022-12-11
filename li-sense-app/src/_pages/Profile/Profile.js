@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Profile.css';
-import Logocentral from "../../_assets/img/logoredonda.png";
 import LisenseContext from '../../_context/LisenseContext';
 import { useNavigate } from 'react-router-dom';
 export default function Profile(props){
@@ -118,18 +117,6 @@ export default function Profile(props){
                 className='form-control block w-full text-sm'
               />
             </div> 
-            
-            {/* <div className='py-2'>
-              <label
-                forhmtl='tags'
-                className='text-base font-medium'>
-                  Categorias
-              </label>
-              <input
-                name='tags'
-                className='form-control'
-              />
-            </div> */}
           </div> 
         </div>
         <div className='panel-detail my-4'>
@@ -137,7 +124,7 @@ export default function Profile(props){
             <h1>Informações da Empresa</h1>
           </div>
           <div className='grid grid-cols-2 gap-4 px-5'>
-            <div className=''>
+            <div>
               <label 
                 forhtml='nomemepresa' 
                 className='mb-3 text-base font-medium'>
@@ -145,13 +132,14 @@ export default function Profile(props){
               </label>
               <div className='flex gap-4 items-center'>
                 <input
+                  disabled
                   name='nomemepresa'
                   className='form-control'
                   placeholder={'Torne-se um Vendedor'}
                 />
               </div>
             </div>
-            <div className=''>
+            <div>
               <label 
                 forhtml='cnpj' 
                 className='mb-3 text-base font-medium'>
@@ -159,6 +147,7 @@ export default function Profile(props){
               </label>
               <div className='flex gap-4 items-center'>
                 <input
+                  disabled
                   name='cnpj'
                   className='form-control'
                   placeholder={'Torne-se um Vendedor'}
