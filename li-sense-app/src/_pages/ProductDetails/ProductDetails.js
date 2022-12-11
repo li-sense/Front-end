@@ -26,11 +26,12 @@ export default function ProductDetails() {
   const { currentProduct } = React.useContext(LisenseContext);
   const slideLeft = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 250;
+    slider.scrollLeft = slider.scrollLeft - 500;
   };
+
   const slideRight = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 250;
+    slider.scrollLeft = slider.scrollLeft + 500;
   };
   
   const getProducts = (set) => {
@@ -107,7 +108,7 @@ export default function ProductDetails() {
         >
           {data.map((_value, key) => (
             <div className=" card-slider inline-block p-2 cursor-pointer overflow-y-auto" key={key}>
-              <Components.Card data={_value} key={key} />
+              <Components.Card className="card-slider" data={_value} key={key} />
             </div>
           ))}
         </div>
