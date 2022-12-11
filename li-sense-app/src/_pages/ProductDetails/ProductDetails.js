@@ -104,11 +104,11 @@ export default function ProductDetails() {
         />
         <div
           id="slider"
-          className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="w-full h-full overflow-x-hidden scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {data.map((_value, key) => (
-            <div className=" d inline-block p-2 cursor-pointer overflow-y-auto" key={key}>
-              <Components.Card className="d" data={_value} key={key} />
+            <div className=" card-slider inline-block p-2 cursor-pointer overflow-y-auto" key={key}>
+              <Components.Card className="card-slider" data={_value} key={key} />
             </div>
           ))}
         </div>
