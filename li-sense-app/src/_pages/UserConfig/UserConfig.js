@@ -11,19 +11,26 @@ export default function UserConfig() {
         <h1>Configurações de Usuário</h1>
       </div>
       <div className='flex-row max-w-4xl mx-auto py-6'>
-        <div className='panel-detail my-4'>
+        <div className='panel-detail my-4 pb-6'>
           <div className='text-xl pt-4 font-extrabold'>
             <h1>Editar Foto de Perfil</h1>
           </div>
-          <div className='flex flex-row items-center justify-center space-x-12 p-4'>
-            <div>
+          <div className='flex flex-col items-center p-4'>
+            <div className='py-4'>
               Para adicionar uma foto de perfil basta clicar na foto
             </div>
-            <img 
-              name='avatar' 
-              className='rounded-full w-[360px] h-[360px]'
-              src={user.profileObj ? user.profileObj.imageUrl : ''} 
-            />
+            <div className='order-first py-2'>
+              <label className="profile-picture" for="profile-picture-input" tabIndex="0">
+                <span className="profile-picture-image">Escolher nova foto</span>
+              </label>
+              <input
+                onchange="readURL(this);"
+                type="file"
+                name="profile-picture-input"
+                id="profile-picture-input"
+                multiple
+              ></input>
+            </div>
           </div>
         </div>
         <div className='panel-detail my-4'>

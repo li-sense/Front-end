@@ -11,10 +11,10 @@ export default function BeAseller() {
         <div className='text-2xl py-1 px-1 font-bold container-text'>
           <h1>Torne-se um Vendedor</h1>
         </div>
-        <div className='text-xl pt-4 font-extrabold'>
-          <h1>Informações do Usuário</h1>
-        </div>
         <div className='panel-detail my-4'>
+          <div className='text-xl pt-4 font-extrabold'>
+            <h1>Informações do Usuário</h1>
+          </div>
           <div className='grid grid-cols-6'>
             <div className='lg:col-span-4 col-span-6 p-6'>
               <div className='py-2'>
@@ -69,10 +69,18 @@ export default function BeAseller() {
               </div>
             </div>
             <div className='lg:col-start-5 col-start-3 py-14 px-6'>
-              <img 
-                name='avatar'
-                className='rounded-full w-[240px] h-[240px]'
-                src={user.profileObj ? user.profileObj.imageUrl : ''}/>
+              <div>
+                <label className="profile-picture" for="profile-picture-input" tabIndex="0">
+                  <span className="profile-picture-image">Escolher nova foto</span>
+                </label>
+                <input
+                  onchange="readURL(this);"
+                  type="file"
+                  name="profile-picture-input"
+                  id="profile-picture-input"
+                  multiple
+                ></input>
+              </div>
             </div>
           </div>
         </div>

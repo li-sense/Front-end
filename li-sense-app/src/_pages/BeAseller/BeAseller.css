@@ -1,8 +1,8 @@
-.panel-detail {
+/* .panel-detail {
     border-radius: 8px;
     border: 2px solid var(--color-secondary);
     background-color: var(--color-background-form);
-}
+} */
 
 .submit {
     font-family: var(--title-fonts);
@@ -19,4 +19,8 @@
     color: #000;
     font-weight: bold;
     text-decoration: none;
+}
+.profile-picture {
+    width: 200px;
+    height: 200px;
 }

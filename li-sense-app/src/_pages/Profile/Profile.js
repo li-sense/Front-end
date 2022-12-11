@@ -4,11 +4,7 @@ import Logocentral from "../../_assets/img/logoredonda.png";
 import LisenseContext from '../../_context/LisenseContext';
 import { useNavigate } from 'react-router-dom';
 export default function Profile(props){
-  const [nome, setNome] = useState(props.nome);
-  const [senha, setSenha] = useState(props.senha);
-  const [email, setEmail] = useState(props.email);
-  const [cpf, setCpf] = useState(props.cpf);
-  const [telefone, setTelefone] = useState(props.telefone);
+  const navigate = useNavigate();
   const { user } = React.useContext(LisenseContext);
 
   return (
@@ -52,7 +48,7 @@ export default function Profile(props){
               </div>
             </div>
             <div className='flex-1 py-4 px-5'>
-              {/*Componente da foto de perfil não esta otimizado e tende a distorcer com o tamanho da tela */}
+              {/*Componente da foto de perfil*/}
               <label forhtml='avatar' className='mb-3 block text-base font-medium'>Foto de Perfil</label> 
               <div>
                 <label className="profile-picture" for="profile-picture-input" tabIndex="0">
@@ -143,14 +139,14 @@ export default function Profile(props){
           <div className='grid grid-cols-2 gap-4 px-5'>
             <div className=''>
               <label 
-                forhtml='password' 
+                forhtml='nomemepresa' 
                 className='mb-3 text-base font-medium'>
                   Nome da Empresa
               </label>
               <div className='flex gap-4 items-center'>
                 <input
-                  name='password' type='password'
-                  className='form-control '
+                  name='nomemepresa'
+                  className='form-control'
                   placeholder={'Torne-se um Vendedor'}
                 />
               </div>
@@ -171,7 +167,7 @@ export default function Profile(props){
             </div>
           </div>
           <div className='flex justify-center py-4'>
-            <button className='submit'>Torne-se um Vendedor</button>
+            <button className='submit' onClick={() => {navigate("/profile/BeAseller");}}>Torne-se um Vendedor</button>
           </div>         
         </div>
       </div>

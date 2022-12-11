@@ -1,9 +1,8 @@
-
-.panel-detail {
+/* .panel-detail {
   border-radius: 8px;
   border: 2px solid var(--color-secondary);
   background-color: var(--color-background-form);
-}
+} */
 
 #profile-picture-input {
   display: none;
