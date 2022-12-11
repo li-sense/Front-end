@@ -3,6 +3,7 @@ import "./editprod.css";
 import { useNavigate } from "react-router-dom";
 
 export default function EditProduct(props) {
+  
   const { product } = props;
   const navigate = useNavigate();
   console.log(product);
@@ -32,13 +33,13 @@ export default function EditProduct(props) {
         <div className="container-all-edit">
           <span className="tilte-prod">Editar Informações do Produto</span>
           <div className="container-imagem-produto">
-            <div class="input-wrapper-prod">
-              <label class="picture" for="picture-input" tabIndex="0">
-                <span class="picture-image">Escolher novas imagens</span>
+            <div className="input-wrapper-prod">
+              <label className="picture" for="picture-input" tabIndex="0">
+                <span className="picture-image">Escolher novas imagens</span>
               </label>
 
               <input
-                onchange="readURL(this);"
+                onChange="readURL(this);"
                 type="file"
                 name="picture-input"
                 id="picture-input"
@@ -52,7 +53,7 @@ export default function EditProduct(props) {
               <label className="infos-prod-l">Preço</label>
               <input className="new-prod" placeholder="R$ 00,00"></input>
               <label className="infos-prod-l">Classificação do Produto</label>
-              <select className="op-cat" id="mySelect" onchange="myFunction()">
+              <select className="op-cat" id="mySelect" onChange="myFunction()">
                 <option>Arte</option>
                 <option value="Livro">Livro</option>
                 <option value="Música">Música</option>

@@ -5,9 +5,16 @@ import { useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
 import { AiFillSetting, AiFillDollarCircle } from "react-icons/ai";
+import LisenseContext from "../../_context/LisenseContext";
 
 export default function DropDownUser(props) {
+  const { isSeller, setUser } = React.useContext(LisenseContext)
   const navigate = useNavigate();
+const logout = () => {
+  setUser([])
+  localStorage.removeItem('userId')
+  localStorage.removeItem('token')
+}
 
   return (
     <>
@@ -27,19 +34,36 @@ export default function DropDownUser(props) {
         >
           <DropDownItens icon={<AiFillSetting />} text={"Configurações"} />
         </li>
+       {
+        !isSeller &&
         <li
+        onClick={() => {
+          navigate("/profile/beAseller");
+        }}
+      >
+        <DropDownItens
+          icon={<AiFillDollarCircle />}
+          text={"Torne-se um vendendor"}
+        />
+      </li>
+       }
+        {
+          isSeller &&
+          <li
           onClick={() => {
-            navigate("/profile/beAseller");
+            navigate("/product/creatproduct");
           }}
         >
           <DropDownItens
             icon={<AiFillDollarCircle />}
-            text={"Torne-se um vendendor"}
+            text={"Criar produto"}
           />
         </li>
+        }
+      
         <li
           onClick={() => {
-            navigate("#");
+            logout()
           }}
         >
 

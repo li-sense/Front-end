@@ -1,10 +1,32 @@
 import LisenseContext from '../../_context/LisenseContext';
+import axios from 'axios';
 import './BeAseller.css';
 import React from "react";
 
 export default function BeAseller() {
   const { user } = React.useContext(LisenseContext);
-
+  const [sellerData, setSellerDataName] = React.useState("");
+  const [isErr, setIsErr] = React.useState("");
+  const [sellerId, setSellerDataId] = React.useState("");
+  const newSeller = async () => {
+    let data = {
+      identificado: sellerId,
+      nome: sellerData,
+    };
+    const auth = localStorage.getItem("token");
+    axios
+      .post("https://dev.li-sense.xyz/api/v1/vendedor/", data, {
+        headers: {
+          Authorization: auth,
+        },
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch((_err) => {
+        setIsErr(_err.response.data.detail);
+      });
+  };
   return (
     <div className="w-screen">
       <div className='flex-row max-w-4xl mx-auto py-6'>
@@ -25,8 +47,9 @@ export default function BeAseller() {
                 </label>
                 <input
                   name='username'
+                  disabled
                   className='form-control'
-                  placeholder={user.profileObj ? user.profileObj.name : ''}
+                  placeholder={user.nome ? user.nome : ""}
                 />
               </div>
               <div className='py-2'>
@@ -37,8 +60,9 @@ export default function BeAseller() {
                 </label>
                 <input
                   name='email'
+                  disabled
                   className='form-control'
-                  placeholder={user.profileObj ? user.profileObj.email : ''}
+                  placeholder={user.email ? user.email : ""}
                 />
               </div>
               <div className='grid grid-cols-2 space-x-4 justify-center'>
@@ -90,7 +114,9 @@ export default function BeAseller() {
               <input
                 name='cpnj'
                 className='form-control'
-                placeholder={user.profileObj ? user.profileObj.cpnj : ''}
+                onChange={(event) => {
+                  setSellerDataId(event.target.value);
+                }}
               />
             </div>
             <div className='py-4'>
@@ -102,12 +128,15 @@ export default function BeAseller() {
               <input
                 name='password'
                 className='form-control'
-                placeholder={user.profileObj ? user.profileObj.incname : ''}
+                onChange={(event) => {
+                  setSellerDataName(event.target.value);
+                }}
               />
             </div>
           </div>
+          <div>{isErr && <p>{isErr}</p>}</div>
           <div className='flex justify-center'>
-            <button className="submit">Torne-se um Vendedor</button>
+            <button className="submit" onClick={() => newSeller()}>Torne-se um Vendedor</button>
           </div>
         </div>
       </div>

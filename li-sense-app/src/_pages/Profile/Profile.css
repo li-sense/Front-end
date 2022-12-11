@@ -1,74 +1,139 @@
-
-.panel-detail {
-  border-radius: 8px;
-  border: 2px solid var(--color-secondary);
-  background-color: var(--color-background-form);
+.profile-user {
+  display: flex;
+  gap: 30px;
+  background: var(--color-background);
+  padding: 100px 20px 50px 20px;
+}
+.container-profile {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+  width: 100%;
+}
+.container-profile img {
+  width: 70px;
+}
+.container-empresa {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+  width: 100%;
 }
 
-#profile-picture-input {
-  display: none;
-}
-.profile-picture-image span{
+.profile-name {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
   font-family: var(--body-fonts);
-  color: #aaa;
-
 }
-.profile-picture {
-  width: 160px;
-  height: 160px;
-  aspect-ratio: 4/3;
-  background: #ddd;
+.profile-name span:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(66, 70, 77);
+}
+.profile-name .icon-settings {
+  color: var(--color-tertiary);
+}
+
+.profile-setting {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #aaa;
-  border: 2px dashed currentcolor;
+  font-size: 24px;
+  color: var(--color-tertiary);
+}
+.profile-setting svg {
   cursor: pointer;
-  font-family: sans-serif;
-  transition: color 300ms ease-in-out, background 300ms ease-in-out;
-  outline: none;
-  overflow: hidden;
-  border-radius: 120px;
 }
 
-.profile-picture:hover {
-  color: #777;
-  background: #ccc;
+.container-empresa {
+  display: flex;
+  gap: 20px;
 }
 
-.profile-picture:active {
-  border-color: turquoise;
-  color: turquoise;
-  background: #eee;
+.container-empresa label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: var(--body-fonts);
+  color: rgb(66, 70, 77);
 }
 
-.profile-picture:focus {
-  color: #777;
-  background: #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.container-empresa input {
+  background: #eeeeee4d;
+  border: 1px solid #eeeeee;
 }
-
-.profile-picture-img {
-  max-width: 100%;
-}
-
-.submit {
+.container-empresa input::placeholder {
   font-family: var(--title-fonts);
-  box-shadow: 5%;
-  background-color: var(--color-primary);
-
-  color: #ffff;
-  padding: 10px 20px;
-
-  border-color: transparent;
-  border-radius: 5px;
-
-  transition: all 0.3s ease-out;
+  line-height: 24px;
+  font-size: 15px;
 }
 
-.submit:hover {
-  background: var(--color-tertiary);
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
+.container-atalhos {
+  display: flex;
+  gap: 30px;
+  background: var(--color-background);
+  padding: 0px 20px;
+}
+.container-atalhos h1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 0.875rem;
+  font-weight: 700;
+}
+
+.container-atalhos h1 svg {
+  color: var(--color-tertiary);
+}
+
+.cards-atalhos {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background: var(--color-background);
+  padding: 20px 20px 100px 20px;
+}
+.card-atalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid rgb(222, 224, 228);
+  width: 100%;
+  padding: 50px 0;
+}
+
+.card-atalho svg {
+  color: var(--color-tertiary);
+  font-size: 24px;
+}
+.card-atalho span {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(127, 133, 141);
+  font-family: var(--body-fonts);
+}
+
+.card-atalho:hover {
+  cursor: pointer;
 }
