@@ -37,32 +37,31 @@ export default function Profile(props) {
             />
           </div>
         </div>
-       
-          {!company && (
-            <div className="container-empresa">
-              <div>
-                <label>Nome da Empresa</label>
-                <input
-                  disabled
-                  name="password"
-                  type="password"
-                  className="form-control "
-                  placeholder={company.nome}
-                />
-              </div>
-              <div>
-                <label>CNPJ da Empresa</label>
-                <input
-                  disabled
-                  name="cnpj"
-                  className="form-control"
-                  placeholder={company.identificado}
-                />
-              </div>
+
+        {company && (
+          <div className="container-empresa">
+            <div>
+              <label>Nome da Empresa</label>
+              <input
+                disabled
+                name="password"
+                type="password"
+                className="form-control "
+                placeholder={company.nome}
+              />
             </div>
-          )}
-        </div>
-   
+            <div>
+              <label>CNPJ da Empresa</label>
+              <input
+                disabled
+                name="cnpj"
+                className="form-control"
+                placeholder={company.identificado}
+              />
+            </div>
+          </div>
+        )}
+      </div>
 
       <div className="container-atalhos">
         <h1>
@@ -80,7 +79,8 @@ export default function Profile(props) {
           <AiFillSetting />
           <span>Configurações</span>
         </div>
-        <div
+        { !company &&
+          <div
           className="card-atalho"
           onClick={() => {
             navigate("/profile/beAseller");
@@ -89,6 +89,7 @@ export default function Profile(props) {
           <FiCheckCircle />
           <span>Torne-se um vendendor</span>
         </div>
+        }
         {company && (
           <div
             className="card-atalho"

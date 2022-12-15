@@ -31,8 +31,11 @@ function Main() {
       .then((res) => {
         if (res.data) {
           res.data.map((value) => {
+           
+
             if (value.usuario_id == verifyUser) {
               setSeller(true);
+      
               setCompany(value)
             } else {
               setSeller(false);

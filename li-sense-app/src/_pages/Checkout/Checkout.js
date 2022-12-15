@@ -6,16 +6,19 @@ import './checkout.css'
 import { BsTrash } from 'react-icons/bs'
 
 export default function Checkout() {
-  const { cart } = React.useContext(LisenseContext)
+  const { cart , clearCart} = React.useContext(LisenseContext)
   return (
     <>
       <div className="page-checkout">
         <div className="container-cart">
           <div className="title-container">
             <h1>Carrinho de compras</h1>
-            <button>
-              <BsTrash /> Remover todos os produtos
-            </button>
+         {
+          cart.length > 0 &&
+          <button onClick={() => {clearCart()}} >
+          <BsTrash /> Remover todos os produtos
+        </button>
+         }
           </div>
           <div className="container-detail">
             <div className="list-titles">
@@ -23,7 +26,7 @@ export default function Checkout() {
               <p>Preço</p>
             </div>
             {cart.length > 0 ? (
-              cart.map(value => <Cart items={value} key={value}/>)
+              cart.map((value, key) => <Cart items={value} key={key} id={value.id}/>)
             ) : (
               <div>
                 <h1>Seu carrinho esta vazio, Continue comprando</h1>
@@ -38,3 +41,8 @@ export default function Checkout() {
     </>
   )
 }
+/*
+  <button>
+              <BsTrash /> Remover todos os produtos
+            </button>
+*/
