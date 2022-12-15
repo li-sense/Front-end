@@ -18,7 +18,7 @@ export default function Checkout(props) {
 
   React.useEffect(() => {
     setCartPrice()
-  }, [])
+  }, [cart])
   return (
     <>
       <div className="container-checkout">

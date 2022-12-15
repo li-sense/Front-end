@@ -38,7 +38,7 @@ export default function Card(props) {
           }}
         >
           <img
-            src="https://i.pinimg.com/236x/65/f7/76/65f776ea5db956ccd49de5242c81eb38.jpg"
+            src={data.imagem_produto}
             className="productImage"
             alt="product-img"
           />

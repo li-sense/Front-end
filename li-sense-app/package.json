@@ -53,6 +53,7 @@
     "react-google-login": "^5.2.2",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.2",
-    "single-spa-react": "^4.3.1"
+    "single-spa-react": "^4.3.1",
+    "web3.storage": "^4.4.0"
   }
 }

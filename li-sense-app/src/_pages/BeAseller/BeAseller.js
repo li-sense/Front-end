@@ -1,10 +1,12 @@
 import LisenseContext from '../../_context/LisenseContext';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './BeAseller.css';
 import React from "react";
 
 export default function BeAseller() {
-  const { user } = React.useContext(LisenseContext);
+  const navigate = useNavigate()
+  const { user, setCompany, setSeller } = React.useContext(LisenseContext);
   const [sellerData, setSellerDataName] = React.useState("");
   const [isErr, setIsErr] = React.useState("");
   const [sellerId, setSellerDataId] = React.useState("");
@@ -21,7 +23,13 @@ export default function BeAseller() {
         },
       })
       .then(function (response) {
-        console.log(response);
+        if(response.data) {
+          setCompany(response.data)
+          setSeller(true)
+          alert('Vendedor registrado com sucesso')
+          navigate('/profile');
+        }
+
       })
       .catch((_err) => {
         setIsErr(_err.response.data.detail);

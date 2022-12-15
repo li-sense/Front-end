@@ -10,20 +10,12 @@ export default function RecoveryPassword() {
       <div className="container-send">
         <h1>Redefinir senha</h1>
         {
-          !isReceivedEmail ?
+          !isReceivedEmail &&
             <div>
             <SendEmailRecovery setIsReceivedEmail={setIsReceivedEmail}/>
-            
-            </div>
-            : <div>
-            <RegisterNewPassword setIsReceivedEmail={setIsReceivedEmail}/>
-            
-            </div>
+            </div> 
         }
-      </div>  
-        
-  
-     
+      </div>
     </>
   )
 }
