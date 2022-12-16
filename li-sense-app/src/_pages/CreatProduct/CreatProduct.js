@@ -2,36 +2,19 @@ import React from "react";
 import axios from "axios";
 import "./creat.css";
 import { useNavigate } from "react-router-dom";
+import {_web3} from '../../_service/Web3Storage'
 
 export default function CreatProtduct(props) {
-  const { product } = props;
+
   const [name, setName] = React.useState("");
   const [descricao, setDescricao] = React.useState("");
   const [isErr, setIsErr] = React.useState("");
   const [preco, setPreco] = React.useState("");
   const [detalhes, setDetalhes] = React.useState("");
+  const [categoria, setCategoria] = React.useState("");
+  const [productImage, setProductImage] = React.useState("");
+
   const navigate = useNavigate();
-  // console.log(product);
-
-  function funcao1() {
-    alert("Produto Adicionado");
-    this.reset();
-  }
-  function funcao2() {
-    alert("Alterações Canceladas!");
-    navigate("/product/creatproduct");
-  }
-  function readURL(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-
-      reader.onload = function (e) {
-        $("#blah").attr("src", e.target.result);
-      };
-
-      reader.readAsDataURL(input.files[0]);
-    }
-  }
 
   const createProduct = async () => {
     let data = {
@@ -39,6 +22,8 @@ export default function CreatProtduct(props) {
       descricao: descricao,
       preco: preco,
       detalhes: detalhes,
+      categoria: categoria,
+      imagem_produto: productImage
     };
     const auth = localStorage.getItem("token");
     axios
@@ -58,6 +43,14 @@ export default function CreatProtduct(props) {
       });
   };
 
+  const uploadImage = async (file) => {
+    let name = file.files[0].name.toString()
+    console.log("name", name)
+  let request =  await _web3.uploadNewFile(file.files, name)
+  setProductImage(request)
+
+  }
+
   return (
     <>
       <div>
@@ -73,14 +66,7 @@ export default function CreatProtduct(props) {
                   setName(event.target.value);
                 }}
               ></input>
-              <label className="infos-new-prod">Descrição</label>
-              <input
-                className="new-prod-c"
-                placeholder="R$ 00,00"
-                onChange={(event) => {
-                  setDescricao(event.target.value);
-                }}
-              ></input>
+            
               <label className="infos-new-prod">Detalhes</label>
               <input
                 className="new-prod-c"
@@ -98,7 +84,7 @@ export default function CreatProtduct(props) {
                 }}
               ></input>
               <label className="infos-new-prod">Classificação do Produto</label>
-              <select className="op-cat" id="mySelect" onchange="myFunction()">
+              <select className="op-cat" id="mySelect" onChange={() => {setCategoria(event.target.value)}}>
                 <option>Arte</option>
                 <option value="Livro">Livro</option>
                 <option value="Música">Música</option>
@@ -106,27 +92,30 @@ export default function CreatProtduct(props) {
             </div>
             <div className="input-wrapper-prod-c">
               <div className="input-wrapper">
-                <label for="input-file">Selecionar imagens do produto</label>
-                <input id="input-file" type="file" value="" multiple />
+                <label htmlFor="input-file">Selecionar imagens do produto</label>
+                <input id="input-file" type="file"  multiple onChange={(event) => {uploadImage(event.target)}}/>
                 <span id="file-name"></span>
               </div>
             </div>
           </div>
           <div className="container-detalhes-c">
             <div className="title-det-c">
-              <p>Insira as informações/detalhes do produto ao lado </p>
+              <p>Insira a descrição do produto ao lado </p>
             </div>
             <textarea
               className="detalhes-produto-c"
               placeholder="digite aqui..."
+              onChange={(event) => {
+                setDescricao(event.target.value);
+              }}
             />
           </div>
           <div className="botoes">
             <p>{isErr ? "Esse produto ja existe" : ""}</p>
-            <button className="btn-salvar" onClick={() => createProduct()}>
+            <button className="btn-salvar" onClick={() => {createProduct()}}>
               Criar Produto
             </button>
-            <button className="btn-cancelar" onClick={funcao2}>
+            <button className="btn-cancelar" >
               Cancelar
             </button>
           </div>

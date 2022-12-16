@@ -1,24 +1,40 @@
 import React from 'react'
 import './cart.css'
+import { BsTrash } from 'react-icons/bs'
+import axios from 'axios'
+import LisenseContext from '../../_context/LisenseContext'
 
 export default function Cart(props) {
-  const { items } = props
+  const { filterCart } = React.useContext(LisenseContext)
+  const { items, id } = props
+  const [owner, setOwner] = React.useState('')
+  React.useEffect(() => {
+    getOwner()
+  },[])
+  const getOwner = async( ) => {
+    axios.get(`https://dev.li-sense.xyz/api/v1/vendedor/${items.vendedor_id}`).then((res) => {
+      setOwner(res.data.nome)
+    })
+  }
 
   return (
     <>
       <div className="list-content">
         <div className="product-detail">
-          <img src="https://images-americanas.b2w.io/produtos/01/00/img/4240755/6/4240755664G1.jpg" />
+          <img src={items.imagem_produto} />
           <div className="name-detail">
-            <h2>
-             {items.descricao}
-            </h2>
-            
-            <h3>Vendido por: Nikko BR</h3>
-            <p>Remover</p>
+            <h2>{items.descricao}</h2>
+
+            <h3>Vendido por: {owner}</h3>
           </div>
         </div>
-        <div className="price">{items.preco}</div>
+        <div className="price">
+          {items.preco}
+          <span onClick={() => { filterCart(id) }}>
+            <BsTrash />
+            Remover
+          </span>
+        </div>
       </div>
     </>
   )

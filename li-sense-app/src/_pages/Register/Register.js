@@ -15,6 +15,7 @@ export default function Register() {
   const [isErr, setIsErr] = useState(false);
   const [userData, setUserData] = React.useState({
     email: "",
+    imagem_usuario: '',
     senha: "",
     nome: "",
     sobrenome: "test",
@@ -30,7 +31,7 @@ export default function Register() {
         "Content-Type": "application/json",
       },
     };
-    const result = await axios
+    await axios
       .post(
         "https://dev.li-sense.xyz/api/v1/usuarios/registra-usuarios",
         userData,
@@ -65,6 +66,7 @@ export default function Register() {
                 onChange={(event) => {
                   setUserData({
                     email: userData.email,
+                    imagem_usuario: '',
                     senha: userData.senha,
                     nome: event.target.value,
                     sobrenome: userData.sobrenome,
@@ -85,6 +87,7 @@ export default function Register() {
                 onChange={(event) => {
                   setUserData({
                     email: event.target.value,
+                    imagem_usuario: '',
                     senha: userData.senha,
                     nome: userData.nome,
                     sobrenome: userData.sobrenome,
@@ -106,6 +109,7 @@ export default function Register() {
                 onChange={(event) => {
                   setUserData({
                     email: userData.email,
+                    imagem_usuario: '',
                     senha: event.target.value,
                     nome: userData.nome,
                     sobrenome: userData.sobrenome,
@@ -127,6 +131,7 @@ export default function Register() {
                 onChange={(event) => {
                   setUserData({
                     email: userData.email,
+                    imagem_usuario: '',
                     senha: event.target.value,
                     nome: userData.nome,
                     sobrenome: userData.sobrenome,

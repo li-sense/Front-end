@@ -10,8 +10,9 @@ export default function RegisterNewPassword(props) {
   };
   return (
     <>
-      <form className="redefinir">
-      <label htmlFor="send-red" className='span-send-redefinir'>Digite nova senha</label>
+      <div className="flex flex-row items-center justify-center">
+     <div className="redefinir w-[80%]">
+     <label htmlFor="send-red" className='span-send-redefinir'>Digite nova senha</label>
              <div className="input-wrapper-campo">
                 <input
                   id="send"
@@ -49,7 +50,8 @@ export default function RegisterNewPassword(props) {
         <button onClick={() => { setIsReceivedEmail(false) }} className='btn-redefinir'>
           Redefinir senha
         </button>
-      </form>
+     </div>
+      </div>
       
     </>
   )

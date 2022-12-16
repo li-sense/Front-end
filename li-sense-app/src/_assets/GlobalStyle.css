@@ -13,7 +13,8 @@
   /* colors */
   --color-primary: #62378c;
   --color-secondary: #111827;
-  --color-tertiary: #cd9042;
+  --color-tertiary: #ff6500;
+  /* --color-tertiary: #cd9042; */
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-hover: rgba(255, 255, 255, 0.739);

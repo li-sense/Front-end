@@ -56,6 +56,7 @@ export default function Login() {
         axios.get("https://dev.li-sense.xyz/api/v1/usuarios/").then((res) => {
           res.data.map((email) => {
             if (email.email == userData.email) {
+              localStorage.setItem('userId', email.id)
               setUser(email);
               navigate('/')
             }
@@ -147,18 +148,7 @@ export default function Login() {
           <p className="entarg">
             <a>Ou</a>
           </p>
-          <button type="submit" className="btn1G">
-            <div className="content-btn1">
-              <GoogleLogin
-                clientId={clientId}
-                buttonText="Login"
-                onSuccess={onSuccess}
-                onFailure={onFailure}
-                cookiePolicy={"single_host_origin"}
-                isSignedIn={true}
-              />
-            </div>
-          </button>
+          
         </div>
       </div>
     </div>

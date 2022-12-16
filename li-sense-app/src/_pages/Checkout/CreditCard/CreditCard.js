@@ -25,7 +25,7 @@ export default function PaymentForm() {
 
                 <input
                   type="caracter"
-                  maxlength="19"
+                  maxLength="19"
                   className="form-control-dat-tel"
                   placeholder="0000.0000.0000.0000"
                 />
